@@ -1,0 +1,8 @@
+---
+- hosts: server2
+  remote_user: test
+  become: yes
+  roles: 
+      - webserver
+      - mysql
+      - ansible-role-git-master

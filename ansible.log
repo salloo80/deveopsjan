@@ -1,0 +1,1810 @@
+2019-03-18 22:53:54,839 p=3847 u=test |  PLAY [webserver] ***************************************************************
+2019-03-18 22:53:54,856 p=3847 u=test |  TASK [Gathering Facts] *********************************************************
+2019-03-18 22:53:56,859 p=3847 u=test |  ok: [server3]
+2019-03-18 22:53:56,872 p=3847 u=test |  ok: [server2]
+2019-03-18 22:53:56,916 p=3847 u=test |  TASK [install httpd] ***********************************************************
+2019-03-18 22:53:58,100 p=3847 u=test |  ok: [server2]
+2019-03-18 22:53:58,102 p=3847 u=test |  ok: [server3]
+2019-03-18 22:53:58,161 p=3847 u=test |  TASK [create index.html file] **************************************************
+2019-03-18 22:53:59,843 p=3847 u=test |  ok: [server3]
+2019-03-18 22:53:59,878 p=3847 u=test |  ok: [server2]
+2019-03-18 22:53:59,925 p=3847 u=test |  TASK [start httpd service] *****************************************************
+2019-03-18 22:54:00,875 p=3847 u=test |  ok: [server2]
+2019-03-18 22:54:00,888 p=3847 u=test |  ok: [server3]
+2019-03-18 22:54:00,893 p=3847 u=test |  PLAY RECAP *********************************************************************
+2019-03-18 22:54:00,894 p=3847 u=test |  server2                    : ok=4    changed=0    unreachable=0    failed=0   
+2019-03-18 22:54:00,894 p=3847 u=test |  server3                    : ok=4    changed=0    unreachable=0    failed=0   
+2019-03-18 23:12:09,472 p=4058 u=test |  PLAY [webserver] ***************************************************************
+2019-03-18 23:12:09,493 p=4058 u=test |  TASK [Gathering Facts] *********************************************************
+2019-03-18 23:12:11,430 p=4058 u=test |  ok: [server2]
+2019-03-18 23:12:11,448 p=4058 u=test |  ok: [server3]
+2019-03-18 23:12:11,493 p=4058 u=test |  TASK [install httpd] ***********************************************************
+2019-03-18 23:12:13,354 p=4058 u=test |  fatal: [server2]: FAILED! => {"changed": false, "msg": "No package matching 'httpd1' found available, installed or updated", "rc": 126, "results": ["No package matching 'httpd1' found available, installed or updated"]}
+2019-03-18 23:12:13,374 p=4058 u=test |  fatal: [server3]: FAILED! => {"changed": false, "msg": "No package matching 'httpd1' found available, installed or updated", "rc": 126, "results": ["No package matching 'httpd1' found available, installed or updated"]}
+2019-03-18 23:12:13,375 p=4058 u=test |  	to retry, use: --limit @/home/test/playbooks/errors.retry
+
+2019-03-18 23:12:13,375 p=4058 u=test |  PLAY RECAP *********************************************************************
+2019-03-18 23:12:13,376 p=4058 u=test |  server2                    : ok=1    changed=0    unreachable=0    failed=1   
+2019-03-18 23:12:13,376 p=4058 u=test |  server3                    : ok=1    changed=0    unreachable=0    failed=1   
+2019-03-18 23:14:17,286 p=4118 u=test |  PLAY [webserver] ***************************************************************
+2019-03-18 23:14:17,307 p=4118 u=test |  TASK [Gathering Facts] *********************************************************
+2019-03-18 23:14:19,056 p=4118 u=test |  ok: [server2]
+2019-03-18 23:14:19,080 p=4118 u=test |  ok: [server3]
+2019-03-18 23:14:19,134 p=4118 u=test |  TASK [install httpd] ***********************************************************
+2019-03-18 23:14:20,839 p=4118 u=test |  fatal: [server3]: FAILED! => {"changed": false, "msg": "No package matching 'httpd1' found available, installed or updated", "rc": 126, "results": ["No package matching 'httpd1' found available, installed or updated"]}
+2019-03-18 23:14:20,840 p=4118 u=test |  ...ignoring
+2019-03-18 23:14:20,859 p=4118 u=test |  fatal: [server2]: FAILED! => {"changed": false, "msg": "No package matching 'httpd1' found available, installed or updated", "rc": 126, "results": ["No package matching 'httpd1' found available, installed or updated"]}
+2019-03-18 23:14:20,859 p=4118 u=test |  ...ignoring
+2019-03-18 23:14:20,907 p=4118 u=test |  TASK [create index.html file] **************************************************
+2019-03-18 23:14:22,606 p=4118 u=test |  ok: [server2]
+2019-03-18 23:14:22,638 p=4118 u=test |  ok: [server3]
+2019-03-18 23:14:22,689 p=4118 u=test |  TASK [start httpd service] *****************************************************
+2019-03-18 23:14:23,630 p=4118 u=test |  ok: [server3]
+2019-03-18 23:14:23,657 p=4118 u=test |  ok: [server2]
+2019-03-18 23:14:23,662 p=4118 u=test |  PLAY RECAP *********************************************************************
+2019-03-18 23:14:23,663 p=4118 u=test |  server2                    : ok=4    changed=0    unreachable=0    failed=0   
+2019-03-18 23:14:23,663 p=4118 u=test |  server3                    : ok=4    changed=0    unreachable=0    failed=0   
+2019-03-18 23:16:15,698 p=4228 u=test |  server2 | SUCCESS => {
+    "ansible_facts": {
+        "ansible_all_ipv4_addresses": [
+            "192.168.0.21"
+        ], 
+        "ansible_all_ipv6_addresses": [
+            "fe80::a00:27ff:fe2c:c3f3"
+        ], 
+        "ansible_apparmor": {
+            "status": "disabled"
+        }, 
+        "ansible_architecture": "x86_64", 
+        "ansible_bios_date": "12/01/2006", 
+        "ansible_bios_version": "VirtualBox", 
+        "ansible_cmdline": {
+            "KEYBOARDTYPE": "pc", 
+            "KEYTABLE": "uk", 
+            "LANG": "en_US.UTF-8", 
+            "SYSFONT": "latarcyrheb-sun16", 
+            "quiet": true, 
+            "rd_LVM_LV": "vg_salman/lv_root", 
+            "rd_NO_DM": true, 
+            "rd_NO_LUKS": true, 
+            "rd_NO_MD": true, 
+            "rhgb": true, 
+            "ro": true, 
+            "root": "/dev/mapper/vg_salman-lv_root"
+        }, 
+        "ansible_date_time": {
+            "date": "2019-03-18", 
+            "day": "18", 
+            "epoch": "1552950974", 
+            "hour": "23", 
+            "iso8601": "2019-03-18T23:16:14Z", 
+            "iso8601_basic": "20190318T231614511334", 
+            "iso8601_basic_short": "20190318T231614", 
+            "iso8601_micro": "2019-03-18T23:16:14.511560Z", 
+            "minute": "16", 
+            "month": "03", 
+            "second": "14", 
+            "time": "23:16:14", 
+            "tz": "GMT", 
+            "tz_offset": "+0000", 
+            "weekday": "Monday", 
+            "weekday_number": "1", 
+            "weeknumber": "11", 
+            "year": "2019"
+        }, 
+        "ansible_default_ipv4": {
+            "address": "192.168.0.21", 
+            "alias": "eth1", 
+            "broadcast": "192.168.0.255", 
+            "gateway": "192.168.0.1", 
+            "interface": "eth1", 
+            "macaddress": "08:00:27:2c:c3:f3", 
+            "mtu": 1500, 
+            "netmask": "255.255.255.0", 
+            "network": "192.168.0.0", 
+            "type": "ether"
+        }, 
+        "ansible_default_ipv6": {}, 
+        "ansible_device_links": {
+            "ids": {
+                "dm-0": [
+                    "dm-name-vg_salman-lv_root", 
+                    "dm-uuid-LVM-9UThQRUlo6mLPz1Dr2UHEMRlqvZ9YsL917JgfZ78oPO8REFJdf02sl3s3B6AW2Pn"
+                ], 
+                "dm-1": [
+                    "dm-name-vg_salman-lv_swap", 
+                    "dm-uuid-LVM-9UThQRUlo6mLPz1Dr2UHEMRlqvZ9YsL9mIskuHJlZt2y5BSTfFX4LinjKwMFtlT5"
+                ], 
+                "sda": [
+                    "ata-VBOX_HARDDISK_VB936c4716-86a8115c", 
+                    "scsi-SATA_VBOX_HARDDISK_VB936c4716-86a8115c"
+                ], 
+                "sda1": [
+                    "ata-VBOX_HARDDISK_VB936c4716-86a8115c-part1", 
+                    "scsi-SATA_VBOX_HARDDISK_VB936c4716-86a8115c-part1"
+                ], 
+                "sda2": [
+                    "ata-VBOX_HARDDISK_VB936c4716-86a8115c-part2", 
+                    "lvm-pv-uuid-GxM16i-L1OX-U3Mb-0s6w-I4LO-2b6A-NXeImO", 
+                    "scsi-SATA_VBOX_HARDDISK_VB936c4716-86a8115c-part2"
+                ], 
+                "sr0": [
+                    "ata-VBOX_CD-ROM_VB2-01700376"
+                ]
+            }, 
+            "labels": {}, 
+            "masters": {
+                "sda2": [
+                    "dm-0", 
+                    "dm-1"
+                ]
+            }, 
+            "uuids": {
+                "dm-0": [
+                    "26426a9d-4d40-4d20-94b3-d30219805bb2"
+                ], 
+                "dm-1": [
+                    "384dd44b-e460-462e-af2f-8e4e0009e0b5"
+                ], 
+                "sda1": [
+                    "a8d70f3e-059e-4261-aa46-7d84a9ed7fd8"
+                ]
+            }
+        }, 
+        "ansible_devices": {
+            "dm-0": {
+                "holders": [], 
+                "host": "", 
+                "links": {
+                    "ids": [
+                        "dm-name-vg_salman-lv_root", 
+                        "dm-uuid-LVM-9UThQRUlo6mLPz1Dr2UHEMRlqvZ9YsL917JgfZ78oPO8REFJdf02sl3s3B6AW2Pn"
+                    ], 
+                    "labels": [], 
+                    "masters": [], 
+                    "uuids": [
+                        "26426a9d-4d40-4d20-94b3-d30219805bb2"
+                    ]
+                }, 
+                "model": null, 
+                "partitions": {}, 
+                "removable": "0", 
+                "rotational": "1", 
+                "sas_address": null, 
+                "sas_device_handle": null, 
+                "scheduler_mode": "", 
+                "sectors": "14073856", 
+                "sectorsize": "512", 
+                "size": "6.71 GB", 
+                "support_discard": "0", 
+                "vendor": null, 
+                "virtual": 1
+            }, 
+            "dm-1": {
+                "holders": [], 
+                "host": "", 
+                "links": {
+                    "ids": [
+                        "dm-name-vg_salman-lv_swap", 
+                        "dm-uuid-LVM-9UThQRUlo6mLPz1Dr2UHEMRlqvZ9YsL9mIskuHJlZt2y5BSTfFX4LinjKwMFtlT5"
+                    ], 
+                    "labels": [], 
+                    "masters": [], 
+                    "uuids": [
+                        "384dd44b-e460-462e-af2f-8e4e0009e0b5"
+                    ]
+                }, 
+                "model": null, 
+                "partitions": {}, 
+                "removable": "0", 
+                "rotational": "1", 
+                "sas_address": null, 
+                "sas_device_handle": null, 
+                "scheduler_mode": "", 
+                "sectors": "1671168", 
+                "sectorsize": "512", 
+                "size": "816.00 MB", 
+                "support_discard": "0", 
+                "vendor": null, 
+                "virtual": 1
+            }, 
+            "loop0": {
+                "holders": [], 
+                "host": "", 
+                "links": {
+                    "ids": [], 
+                    "labels": [], 
+                    "masters": [], 
+                    "uuids": []
+                }, 
+                "model": null, 
+                "partitions": {}, 
+                "removable": "0", 
+                "rotational": "1", 
+                "sas_address": null, 
+                "sas_device_handle": null, 
+                "scheduler_mode": "", 
+                "sectors": "0", 
+                "sectorsize": "512", 
+                "size": "0.00 Bytes", 
+                "support_discard": "0", 
+                "vendor": null, 
+                "virtual": 1
+            }, 
+            "loop1": {
+                "holders": [], 
+                "host": "", 
+                "links": {
+                    "ids": [], 
+                    "labels": [], 
+                    "masters": [], 
+                    "uuids": []
+                }, 
+                "model": null, 
+                "partitions": {}, 
+                "removable": "0", 
+                "rotational": "1", 
+                "sas_address": null, 
+                "sas_device_handle": null, 
+                "scheduler_mode": "", 
+                "sectors": "0", 
+                "sectorsize": "512", 
+                "size": "0.00 Bytes", 
+                "support_discard": "0", 
+                "vendor": null, 
+                "virtual": 1
+            }, 
+            "loop2": {
+                "holders": [], 
+                "host": "", 
+                "links": {
+                    "ids": [], 
+                    "labels": [], 
+                    "masters": [], 
+                    "uuids": []
+                }, 
+                "model": null, 
+                "partitions": {}, 
+                "removable": "0", 
+                "rotational": "1", 
+                "sas_address": null, 
+                "sas_device_handle": null, 
+                "scheduler_mode": "", 
+                "sectors": "0", 
+                "sectorsize": "512", 
+                "size": "0.00 Bytes", 
+                "support_discard": "0", 
+                "vendor": null, 
+                "virtual": 1
+            }, 
+            "loop3": {
+                "holders": [], 
+                "host": "", 
+                "links": {
+                    "ids": [], 
+                    "labels": [], 
+                    "masters": [], 
+                    "uuids": []
+                }, 
+                "model": null, 
+                "partitions": {}, 
+                "removable": "0", 
+                "rotational": "1", 
+                "sas_address": null, 
+                "sas_device_handle": null, 
+                "scheduler_mode": "", 
+                "sectors": "0", 
+                "sectorsize": "512", 
+                "size": "0.00 Bytes", 
+                "support_discard": "0", 
+                "vendor": null, 
+                "virtual": 1
+            }, 
+            "loop4": {
+                "holders": [], 
+                "host": "", 
+                "links": {
+                    "ids": [], 
+                    "labels": [], 
+                    "masters": [], 
+                    "uuids": []
+                }, 
+                "model": null, 
+                "partitions": {}, 
+                "removable": "0", 
+                "rotational": "1", 
+                "sas_address": null, 
+                "sas_device_handle": null, 
+                "scheduler_mode": "", 
+                "sectors": "0", 
+                "sectorsize": "512", 
+                "size": "0.00 Bytes", 
+                "support_discard": "0", 
+                "vendor": null, 
+                "virtual": 1
+            }, 
+            "loop5": {
+                "holders": [], 
+                "host": "", 
+                "links": {
+                    "ids": [], 
+                    "labels": [], 
+                    "masters": [], 
+                    "uuids": []
+                }, 
+                "model": null, 
+                "partitions": {}, 
+                "removable": "0", 
+                "rotational": "1", 
+                "sas_address": null, 
+                "sas_device_handle": null, 
+                "scheduler_mode": "", 
+                "sectors": "0", 
+                "sectorsize": "512", 
+                "size": "0.00 Bytes", 
+                "support_discard": "0", 
+                "vendor": null, 
+                "virtual": 1
+            }, 
+            "loop6": {
+                "holders": [], 
+                "host": "", 
+                "links": {
+                    "ids": [], 
+                    "labels": [], 
+                    "masters": [], 
+                    "uuids": []
+                }, 
+                "model": null, 
+                "partitions": {}, 
+                "removable": "0", 
+                "rotational": "1", 
+                "sas_address": null, 
+                "sas_device_handle": null, 
+                "scheduler_mode": "", 
+                "sectors": "0", 
+                "sectorsize": "512", 
+                "size": "0.00 Bytes", 
+                "support_discard": "0", 
+                "vendor": null, 
+                "virtual": 1
+            }, 
+            "loop7": {
+                "holders": [], 
+                "host": "", 
+                "links": {
+                    "ids": [], 
+                    "labels": [], 
+                    "masters": [], 
+                    "uuids": []
+                }, 
+                "model": null, 
+                "partitions": {}, 
+                "removable": "0", 
+                "rotational": "1", 
+                "sas_address": null, 
+                "sas_device_handle": null, 
+                "scheduler_mode": "", 
+                "sectors": "0", 
+                "sectorsize": "512", 
+                "size": "0.00 Bytes", 
+                "support_discard": "0", 
+                "vendor": null, 
+                "virtual": 1
+            }, 
+            "ram0": {
+                "holders": [], 
+                "host": "", 
+                "links": {
+                    "ids": [], 
+                    "labels": [], 
+                    "masters": [], 
+                    "uuids": []
+                }, 
+                "model": null, 
+                "partitions": {}, 
+                "removable": "0", 
+                "rotational": "1", 
+                "sas_address": null, 
+                "sas_device_handle": null, 
+                "scheduler_mode": "", 
+                "sectors": "32768", 
+                "sectorsize": "512", 
+                "size": "16.00 MB", 
+                "support_discard": "0", 
+                "vendor": null, 
+                "virtual": 1
+            }, 
+            "ram1": {
+                "holders": [], 
+                "host": "", 
+                "links": {
+                    "ids": [], 
+                    "labels": [], 
+                    "masters": [], 
+                    "uuids": []
+                }, 
+                "model": null, 
+                "partitions": {}, 
+                "removable": "0", 
+                "rotational": "1", 
+                "sas_address": null, 
+                "sas_device_handle": null, 
+                "scheduler_mode": "", 
+                "sectors": "32768", 
+                "sectorsize": "512", 
+                "size": "16.00 MB", 
+                "support_discard": "0", 
+                "vendor": null, 
+                "virtual": 1
+            }, 
+            "ram10": {
+                "holders": [], 
+                "host": "", 
+                "links": {
+                    "ids": [], 
+                    "labels": [], 
+                    "masters": [], 
+                    "uuids": []
+                }, 
+                "model": null, 
+                "partitions": {}, 
+                "removable": "0", 
+                "rotational": "1", 
+                "sas_address": null, 
+                "sas_device_handle": null, 
+                "scheduler_mode": "", 
+                "sectors": "32768", 
+                "sectorsize": "512", 
+                "size": "16.00 MB", 
+                "support_discard": "0", 
+                "vendor": null, 
+                "virtual": 1
+            }, 
+            "ram11": {
+                "holders": [], 
+                "host": "", 
+                "links": {
+                    "ids": [], 
+                    "labels": [], 
+                    "masters": [], 
+                    "uuids": []
+                }, 
+                "model": null, 
+                "partitions": {}, 
+                "removable": "0", 
+                "rotational": "1", 
+                "sas_address": null, 
+                "sas_device_handle": null, 
+                "scheduler_mode": "", 
+                "sectors": "32768", 
+                "sectorsize": "512", 
+                "size": "16.00 MB", 
+                "support_discard": "0", 
+                "vendor": null, 
+                "virtual": 1
+            }, 
+            "ram12": {
+                "holders": [], 
+                "host": "", 
+                "links": {
+                    "ids": [], 
+                    "labels": [], 
+                    "masters": [], 
+                    "uuids": []
+                }, 
+                "model": null, 
+                "partitions": {}, 
+                "removable": "0", 
+                "rotational": "1", 
+                "sas_address": null, 
+                "sas_device_handle": null, 
+                "scheduler_mode": "", 
+                "sectors": "32768", 
+                "sectorsize": "512", 
+                "size": "16.00 MB", 
+                "support_discard": "0", 
+                "vendor": null, 
+                "virtual": 1
+            }, 
+            "ram13": {
+                "holders": [], 
+                "host": "", 
+                "links": {
+                    "ids": [], 
+                    "labels": [], 
+                    "masters": [], 
+                    "uuids": []
+                }, 
+                "model": null, 
+                "partitions": {}, 
+                "removable": "0", 
+                "rotational": "1", 
+                "sas_address": null, 
+                "sas_device_handle": null, 
+                "scheduler_mode": "", 
+                "sectors": "32768", 
+                "sectorsize": "512", 
+                "size": "16.00 MB", 
+                "support_discard": "0", 
+                "vendor": null, 
+                "virtual": 1
+            }, 
+            "ram14": {
+                "holders": [], 
+                "host": "", 
+                "links": {
+                    "ids": [], 
+                    "labels": [], 
+                    "masters": [], 
+                    "uuids": []
+                }, 
+                "model": null, 
+                "partitions": {}, 
+                "removable": "0", 
+                "rotational": "1", 
+                "sas_address": null, 
+                "sas_device_handle": null, 
+                "scheduler_mode": "", 
+                "sectors": "32768", 
+                "sectorsize": "512", 
+                "size": "16.00 MB", 
+                "support_discard": "0", 
+                "vendor": null, 
+                "virtual": 1
+            }, 
+            "ram15": {
+                "holders": [], 
+                "host": "", 
+                "links": {
+                    "ids": [], 
+                    "labels": [], 
+                    "masters": [], 
+                    "uuids": []
+                }, 
+                "model": null, 
+                "partitions": {}, 
+                "removable": "0", 
+                "rotational": "1", 
+                "sas_address": null, 
+                "sas_device_handle": null, 
+                "scheduler_mode": "", 
+                "sectors": "32768", 
+                "sectorsize": "512", 
+                "size": "16.00 MB", 
+                "support_discard": "0", 
+                "vendor": null, 
+                "virtual": 1
+            }, 
+            "ram2": {
+                "holders": [], 
+                "host": "", 
+                "links": {
+                    "ids": [], 
+                    "labels": [], 
+                    "masters": [], 
+                    "uuids": []
+                }, 
+                "model": null, 
+                "partitions": {}, 
+                "removable": "0", 
+                "rotational": "1", 
+                "sas_address": null, 
+                "sas_device_handle": null, 
+                "scheduler_mode": "", 
+                "sectors": "32768", 
+                "sectorsize": "512", 
+                "size": "16.00 MB", 
+                "support_discard": "0", 
+                "vendor": null, 
+                "virtual": 1
+            }, 
+            "ram3": {
+                "holders": [], 
+                "host": "", 
+                "links": {
+                    "ids": [], 
+                    "labels": [], 
+                    "masters": [], 
+                    "uuids": []
+                }, 
+                "model": null, 
+                "partitions": {}, 
+                "removable": "0", 
+                "rotational": "1", 
+                "sas_address": null, 
+                "sas_device_handle": null, 
+                "scheduler_mode": "", 
+                "sectors": "32768", 
+                "sectorsize": "512", 
+                "size": "16.00 MB", 
+                "support_discard": "0", 
+                "vendor": null, 
+                "virtual": 1
+            }, 
+            "ram4": {
+                "holders": [], 
+                "host": "", 
+                "links": {
+                    "ids": [], 
+                    "labels": [], 
+                    "masters": [], 
+                    "uuids": []
+                }, 
+                "model": null, 
+                "partitions": {}, 
+                "removable": "0", 
+                "rotational": "1", 
+                "sas_address": null, 
+                "sas_device_handle": null, 
+                "scheduler_mode": "", 
+                "sectors": "32768", 
+                "sectorsize": "512", 
+                "size": "16.00 MB", 
+                "support_discard": "0", 
+                "vendor": null, 
+                "virtual": 1
+            }, 
+            "ram5": {
+                "holders": [], 
+                "host": "", 
+                "links": {
+                    "ids": [], 
+                    "labels": [], 
+                    "masters": [], 
+                    "uuids": []
+                }, 
+                "model": null, 
+                "partitions": {}, 
+                "removable": "0", 
+                "rotational": "1", 
+                "sas_address": null, 
+                "sas_device_handle": null, 
+                "scheduler_mode": "", 
+                "sectors": "32768", 
+                "sectorsize": "512", 
+                "size": "16.00 MB", 
+                "support_discard": "0", 
+                "vendor": null, 
+                "virtual": 1
+            }, 
+            "ram6": {
+                "holders": [], 
+                "host": "", 
+                "links": {
+                    "ids": [], 
+                    "labels": [], 
+                    "masters": [], 
+                    "uuids": []
+                }, 
+                "model": null, 
+                "partitions": {}, 
+                "removable": "0", 
+                "rotational": "1", 
+                "sas_address": null, 
+                "sas_device_handle": null, 
+                "scheduler_mode": "", 
+                "sectors": "32768", 
+                "sectorsize": "512", 
+                "size": "16.00 MB", 
+                "support_discard": "0", 
+                "vendor": null, 
+                "virtual": 1
+            }, 
+            "ram7": {
+                "holders": [], 
+                "host": "", 
+                "links": {
+                    "ids": [], 
+                    "labels": [], 
+                    "masters": [], 
+                    "uuids": []
+                }, 
+                "model": null, 
+                "partitions": {}, 
+                "removable": "0", 
+                "rotational": "1", 
+                "sas_address": null, 
+                "sas_device_handle": null, 
+                "scheduler_mode": "", 
+                "sectors": "32768", 
+                "sectorsize": "512", 
+                "size": "16.00 MB", 
+                "support_discard": "0", 
+                "vendor": null, 
+                "virtual": 1
+            }, 
+            "ram8": {
+                "holders": [], 
+                "host": "", 
+                "links": {
+                    "ids": [], 
+                    "labels": [], 
+                    "masters": [], 
+                    "uuids": []
+                }, 
+                "model": null, 
+                "partitions": {}, 
+                "removable": "0", 
+                "rotational": "1", 
+                "sas_address": null, 
+                "sas_device_handle": null, 
+                "scheduler_mode": "", 
+                "sectors": "32768", 
+                "sectorsize": "512", 
+                "size": "16.00 MB", 
+                "support_discard": "0", 
+                "vendor": null, 
+                "virtual": 1
+            }, 
+            "ram9": {
+                "holders": [], 
+                "host": "", 
+                "links": {
+                    "ids": [], 
+                    "labels": [], 
+                    "masters": [], 
+                    "uuids": []
+                }, 
+                "model": null, 
+                "partitions": {}, 
+                "removable": "0", 
+                "rotational": "1", 
+                "sas_address": null, 
+                "sas_device_handle": null, 
+                "scheduler_mode": "", 
+                "sectors": "32768", 
+                "sectorsize": "512", 
+                "size": "16.00 MB", 
+                "support_discard": "0", 
+                "vendor": null, 
+                "virtual": 1
+            }, 
+            "sda": {
+                "holders": [], 
+                "host": "SATA controller: Intel Corporation 82801HM/HEM (ICH8M/ICH8M-E) SATA Controller [AHCI mode] (rev 02)", 
+                "links": {
+                    "ids": [
+                        "ata-VBOX_HARDDISK_VB936c4716-86a8115c", 
+                        "scsi-SATA_VBOX_HARDDISK_VB936c4716-86a8115c"
+                    ], 
+                    "labels": [], 
+                    "masters": [], 
+                    "uuids": []
+                }, 
+                "model": "VBOX HARDDISK", 
+                "partitions": {
+                    "sda1": {
+                        "holders": [], 
+                        "links": {
+                            "ids": [
+                                "ata-VBOX_HARDDISK_VB936c4716-86a8115c-part1", 
+                                "scsi-SATA_VBOX_HARDDISK_VB936c4716-86a8115c-part1"
+                            ], 
+                            "labels": [], 
+                            "masters": [], 
+                            "uuids": [
+                                "a8d70f3e-059e-4261-aa46-7d84a9ed7fd8"
+                            ]
+                        }, 
+                        "sectors": "1024000", 
+                        "sectorsize": 512, 
+                        "size": "500.00 MB", 
+                        "start": "2048", 
+                        "uuid": "a8d70f3e-059e-4261-aa46-7d84a9ed7fd8"
+                    }, 
+                    "sda2": {
+                        "holders": [
+                            "vg_salman-lv_root", 
+                            "vg_salman-lv_swap"
+                        ], 
+                        "links": {
+                            "ids": [
+                                "ata-VBOX_HARDDISK_VB936c4716-86a8115c-part2", 
+                                "lvm-pv-uuid-GxM16i-L1OX-U3Mb-0s6w-I4LO-2b6A-NXeImO", 
+                                "scsi-SATA_VBOX_HARDDISK_VB936c4716-86a8115c-part2"
+                            ], 
+                            "labels": [], 
+                            "masters": [
+                                "dm-0", 
+                                "dm-1"
+                            ], 
+                            "uuids": []
+                        }, 
+                        "sectors": "15751168", 
+                        "sectorsize": 512, 
+                        "size": "7.51 GB", 
+                        "start": "1026048", 
+                        "uuid": null
+                    }
+                }, 
+                "removable": "0", 
+                "rotational": "1", 
+                "sas_address": null, 
+                "sas_device_handle": null, 
+                "scheduler_mode": "cfq", 
+                "sectors": "16777216", 
+                "sectorsize": "512", 
+                "size": "8.00 GB", 
+                "support_discard": "0", 
+                "vendor": "ATA", 
+                "virtual": 1
+            }, 
+            "sr0": {
+                "holders": [], 
+                "host": "IDE interface: Intel Corporation 82371AB/EB/MB PIIX4 IDE (rev 01)", 
+                "links": {
+                    "ids": [
+                        "ata-VBOX_CD-ROM_VB2-01700376"
+                    ], 
+                    "labels": [], 
+                    "masters": [], 
+                    "uuids": []
+                }, 
+                "model": "CD-ROM", 
+                "partitions": {}, 
+                "removable": "1", 
+                "rotational": "1", 
+                "sas_address": null, 
+                "sas_device_handle": null, 
+                "scheduler_mode": "cfq", 
+                "sectors": "2097151", 
+                "sectorsize": "512", 
+                "size": "1024.00 MB", 
+                "support_discard": "0", 
+                "vendor": "VBOX", 
+                "virtual": 1
+            }
+        }, 
+        "ansible_distribution": "CentOS", 
+        "ansible_distribution_file_parsed": true, 
+        "ansible_distribution_file_path": "/etc/redhat-release", 
+        "ansible_distribution_file_variety": "RedHat", 
+        "ansible_distribution_major_version": "6", 
+        "ansible_distribution_release": "Final", 
+        "ansible_distribution_version": "6.10", 
+        "ansible_dns": {
+            "nameservers": [
+                "194.168.4.100", 
+                "194.168.8.100"
+            ]
+        }, 
+        "ansible_domain": "", 
+        "ansible_effective_group_id": 501, 
+        "ansible_effective_user_id": 501, 
+        "ansible_env": {
+            "CVS_RSH": "ssh", 
+            "G_BROKEN_FILENAMES": "1", 
+            "HOME": "/home/test", 
+            "LANG": "en_US.UTF-8", 
+            "LESSOPEN": "||/usr/bin/lesspipe.sh %s", 
+            "LOGNAME": "test", 
+            "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.tbz=01;31:*.tbz2=01;31:*.bz=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.axa=01;36:*.oga=01;36:*.spx=01;36:*.xspf=01;36:", 
+            "MAIL": "/var/mail/test", 
+            "PATH": "/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin", 
+            "PWD": "/home/test", 
+            "QTDIR": "/usr/lib64/qt-3.3", 
+            "QTINC": "/usr/lib64/qt-3.3/include", 
+            "QTLIB": "/usr/lib64/qt-3.3/lib", 
+            "SHELL": "/bin/bash", 
+            "SHLVL": "2", 
+            "SSH_ASKPASS": "/usr/libexec/openssh/gnome-ssh-askpass", 
+            "SSH_CLIENT": "192.168.0.22 48044 22", 
+            "SSH_CONNECTION": "192.168.0.22 48044 192.168.0.21 22", 
+            "SSH_TTY": "/dev/pts/1", 
+            "TERM": "xterm", 
+            "USER": "test", 
+            "_": "/usr/bin/python"
+        }, 
+        "ansible_eth1": {
+            "active": true, 
+            "device": "eth1", 
+            "features": {
+                "fcoe_mtu": "off [fixed]", 
+                "generic_receive_offload": "on", 
+                "generic_segmentation_offload": "on", 
+                "highdma": "off [fixed]", 
+                "large_receive_offload": "off [fixed]", 
+                "loopback": "off [fixed]", 
+                "netns_local": "off [fixed]", 
+                "ntuple_filters": "off [fixed]", 
+                "receive_hashing": "off [fixed]", 
+                "rx_checksumming": "on", 
+                "rx_vlan_filter": "on [fixed]", 
+                "rx_vlan_offload": "on [fixed]", 
+                "scatter_gather": "on", 
+                "tcp_segmentation_offload": "on", 
+                "tx_checksum_fcoe_crc": "off [fixed]", 
+                "tx_checksum_ip_generic": "on", 
+                "tx_checksum_ipv4": "off", 
+                "tx_checksum_ipv6": "off", 
+                "tx_checksum_sctp": "off [fixed]", 
+                "tx_checksum_unneeded": "off", 
+                "tx_checksumming": "on", 
+                "tx_fcoe_segmentation": "off [fixed]", 
+                "tx_gre_segmentation": "off [fixed]", 
+                "tx_gso_robust": "off [fixed]", 
+                "tx_lockless": "off [fixed]", 
+                "tx_scatter_gather": "on", 
+                "tx_scatter_gather_fraglist": "off [fixed]", 
+                "tx_tcp6_segmentation": "off", 
+                "tx_tcp_ecn_segmentation": "off", 
+                "tx_tcp_segmentation": "on", 
+                "tx_udp_tnl_segmentation": "off [fixed]", 
+                "tx_vlan_offload": "on [fixed]", 
+                "udp_fragmentation_offload": "off [fixed]", 
+                "vlan_challenged": "off [fixed]"
+            }, 
+            "hw_timestamp_filters": [], 
+            "ipv4": {
+                "address": "192.168.0.21", 
+                "broadcast": "192.168.0.255", 
+                "netmask": "255.255.255.0", 
+                "network": "192.168.0.0"
+            }, 
+            "ipv6": [
+                {
+                    "address": "fe80::a00:27ff:fe2c:c3f3", 
+                    "prefix": "64", 
+                    "scope": "link"
+                }
+            ], 
+            "macaddress": "08:00:27:2c:c3:f3", 
+            "module": "e1000", 
+            "mtu": 1500, 
+            "pciid": "0000:00:03.0", 
+            "promisc": false, 
+            "speed": 1000, 
+            "timestamping": [
+                "rx_software", 
+                "software"
+            ], 
+            "type": "ether"
+        }, 
+        "ansible_fips": false, 
+        "ansible_form_factor": "Other", 
+        "ansible_fqdn": "server2", 
+        "ansible_hostname": "server2", 
+        "ansible_interfaces": [
+            "lo", 
+            "eth1"
+        ], 
+        "ansible_is_chroot": false, 
+        "ansible_iscsi_iqn": "", 
+        "ansible_kernel": "2.6.32-754.el6.x86_64", 
+        "ansible_lo": {
+            "active": true, 
+            "device": "lo", 
+            "features": {
+                "fcoe_mtu": "off [fixed]", 
+                "generic_receive_offload": "on", 
+                "generic_segmentation_offload": "on", 
+                "highdma": "on [fixed]", 
+                "large_receive_offload": "off [fixed]", 
+                "loopback": "on [fixed]", 
+                "netns_local": "on [fixed]", 
+                "ntuple_filters": "off [fixed]", 
+                "receive_hashing": "off [fixed]", 
+                "rx_checksumming": "on [fixed]", 
+                "rx_vlan_filter": "off [fixed]", 
+                "rx_vlan_offload": "off [fixed]", 
+                "scatter_gather": "on", 
+                "tcp_segmentation_offload": "on", 
+                "tx_checksum_fcoe_crc": "off [fixed]", 
+                "tx_checksum_ip_generic": "on [fixed]", 
+                "tx_checksum_ipv4": "off [fixed]", 
+                "tx_checksum_ipv6": "off [fixed]", 
+                "tx_checksum_sctp": "off [fixed]", 
+                "tx_checksum_unneeded": "off [fixed]", 
+                "tx_checksumming": "on", 
+                "tx_fcoe_segmentation": "off [fixed]", 
+                "tx_gre_segmentation": "off [fixed]", 
+                "tx_gso_robust": "off [fixed]", 
+                "tx_lockless": "on [fixed]", 
+                "tx_scatter_gather": "on [fixed]", 
+                "tx_scatter_gather_fraglist": "on [fixed]", 
+                "tx_tcp6_segmentation": "on", 
+                "tx_tcp_ecn_segmentation": "on", 
+                "tx_tcp_segmentation": "on", 
+                "tx_udp_tnl_segmentation": "off [fixed]", 
+                "tx_vlan_offload": "off [fixed]", 
+                "udp_fragmentation_offload": "on", 
+                "vlan_challenged": "on [fixed]"
+            }, 
+            "hw_timestamp_filters": [], 
+            "ipv4": {
+                "address": "127.0.0.1", 
+                "broadcast": "host", 
+                "netmask": "255.0.0.0", 
+                "network": "127.0.0.0"
+            }, 
+            "ipv6": [
+                {
+                    "address": "::1", 
+                    "prefix": "128", 
+                    "scope": "host"
+                }
+            ], 
+            "mtu": 65536, 
+            "promisc": false, 
+            "timestamping": [
+                "rx_software", 
+                "software"
+            ], 
+            "type": "loopback"
+        }, 
+        "ansible_local": {}, 
+        "ansible_lsb": {
+            "codename": "Final", 
+            "description": "CentOS release 6.10 (Final)", 
+            "id": "CentOS", 
+            "major_release": "6", 
+            "release": "6.10"
+        }, 
+        "ansible_machine": "x86_64", 
+        "ansible_machine_id": "efa9f86a541dcc45a59d3c6e0000001d", 
+        "ansible_memfree_mb": 338, 
+        "ansible_memory_mb": {
+            "nocache": {
+                "free": 722, 
+                "used": 274
+            }, 
+            "real": {
+                "free": 338, 
+                "total": 996, 
+                "used": 658
+            }, 
+            "swap": {
+                "cached": 0, 
+                "free": 815, 
+                "total": 815, 
+                "used": 0
+            }
+        }, 
+        "ansible_memtotal_mb": 996, 
+        "ansible_mounts": [
+            {
+                "block_available": 714372, 
+                "block_size": 4096, 
+                "block_total": 1698798, 
+                "block_used": 984426, 
+                "device": "/dev/mapper/vg_salman-lv_root", 
+                "fstype": "ext4", 
+                "inode_available": 337781, 
+                "inode_total": 440640, 
+                "inode_used": 102859, 
+                "mount": "/", 
+                "options": "rw", 
+                "size_available": 2926067712, 
+                "size_total": 6958276608, 
+                "uuid": "26426a9d-4d40-4d20-94b3-d30219805bb2"
+            }, 
+            {
+                "block_available": 426951, 
+                "block_size": 1024, 
+                "block_total": 487652, 
+                "block_used": 60701, 
+                "device": "/dev/sda1", 
+                "fstype": "ext4", 
+                "inode_available": 127978, 
+                "inode_total": 128016, 
+                "inode_used": 38, 
+                "mount": "/boot", 
+                "options": "rw", 
+                "size_available": 437197824, 
+                "size_total": 499355648, 
+                "uuid": "a8d70f3e-059e-4261-aa46-7d84a9ed7fd8"
+            }
+        ], 
+        "ansible_nodename": "server2", 
+        "ansible_os_family": "RedHat", 
+        "ansible_pkg_mgr": "yum", 
+        "ansible_processor": [
+            "0", 
+            "GenuineIntel", 
+            "Intel(R) Core(TM) i7-2640M CPU @ 2.80GHz"
+        ], 
+        "ansible_processor_cores": 1, 
+        "ansible_processor_count": 1, 
+        "ansible_processor_threads_per_core": 1, 
+        "ansible_processor_vcpus": 1, 
+        "ansible_product_name": "VirtualBox", 
+        "ansible_product_serial": "NA", 
+        "ansible_product_uuid": "NA", 
+        "ansible_product_version": "1.2", 
+        "ansible_python": {
+            "executable": "/usr/bin/python", 
+            "has_sslcontext": false, 
+            "type": "CPython", 
+            "version": {
+                "major": 2, 
+                "micro": 6, 
+                "minor": 6, 
+                "releaselevel": "final", 
+                "serial": 0
+            }, 
+            "version_info": [
+                2, 
+                6, 
+                6, 
+                "final", 
+                0
+            ]
+        }, 
+        "ansible_python_version": "2.6.6", 
+        "ansible_real_group_id": 501, 
+        "ansible_real_user_id": 501, 
+        "ansible_selinux": {
+            "status": "disabled"
+        }, 
+        "ansible_selinux_python_present": true, 
+        "ansible_service_mgr": "upstart", 
+        "ansible_ssh_host_key_dsa_public": "AAAAB3NzaC1kc3MAAACBAJgHZ4c4lExODp0o+FXor8mZOZy8JsSYQ8RnOsgNLTQ+rcu9m0BRyl4LMzk48Hz0FsKyyzYZomk8ylOuHDM2bhLiYAiuX4C99hTJEI7oRjdJ3OqbQnkmhNGl4QVzUH6rJz6t9JqQbmoTAo4T88asK8L6gOkeHex3L7+smjdrHPqjAAAAFQDQYI+K/2vOsg+2s3CDgnC3Hiu1MQAAAIAGBs7Ba22VPQ0obH2i0VoUzHU3knjjTggn4WWl8pLoP+Awf3PZeaBU7bVk+XQ0A4iVGoWqr0wN0Q1dxLX3To6vkFu3RXHyrNyNMZZJ8Q5jU0mB5fR3dYDtDulS7er3F4pBBvY536PRlwMCW6l8Wlmg/2+kuT2MRdxl8qU7GhsfDwAAAIAkZ2RYhuyxWIIe2a17QK1GSPd3/CpJUAfjaGS3ErGK8tAFM0fGkvhVyBHxBWv5ryHXzh2CC/9lwsaadlNxBZVPrwVErP00e2+1W8eaiB2hXneGHIWtv6JSa1cKZb1sGNoiMHW2tQvgDSL0eRWI/k+S8u/Hd7I6CmqT48hPJWCdMg==", 
+        "ansible_ssh_host_key_rsa_public": "AAAAB3NzaC1yc2EAAAABIwAAAQEAxibMnW0shs078C9IfwxtidO5uLHno1GNkfceqsop5VrSYrHJvZDLVoZCM8lIPDOUnwXPiNIEXQ99mNn2eKU028SNmWM9VoeJjhpjs3g/0XgBCeWPv+HZTomkYSjClkzb5Gc7qRykx6dJa1Qsr8MPd23WX/9SZls1lV+yqj5gQruWkd3TjWgBTHVvy+KObkM8Ju3POacwpPOhlKEYYxk8mjdEWN4QbhN7YWRSGlYmoUm2gra0STyMc7uaHrd1ib1Arkb0XiJifmmPJaJI5nF9Jb2PpJ4cZrbRyKlsInYdQkaAVTp4vsl6XF4Jn72t6zajZ+pfOLsEE1T8qfhBqQo56w==", 
+        "ansible_swapfree_mb": 815, 
+        "ansible_swaptotal_mb": 815, 
+        "ansible_system": "Linux", 
+        "ansible_system_capabilities": [
+            ""
+        ], 
+        "ansible_system_capabilities_enforced": "True", 
+        "ansible_system_vendor": "innotek GmbH", 
+        "ansible_uptime_seconds": 4921, 
+        "ansible_user_dir": "/home/test", 
+        "ansible_user_gecos": "", 
+        "ansible_user_gid": 501, 
+        "ansible_user_id": "test", 
+        "ansible_user_shell": "/bin/bash", 
+        "ansible_user_uid": 501, 
+        "ansible_userspace_architecture": "x86_64", 
+        "ansible_userspace_bits": "64", 
+        "ansible_virtualization_role": "guest", 
+        "ansible_virtualization_type": "virtualbox", 
+        "gather_subset": [
+            "all"
+        ], 
+        "module_setup": true
+    }, 
+    "changed": false
+}
+2019-03-18 23:25:37,230 p=4278 u=test |  PLAY [webserver] ***************************************************************
+2019-03-18 23:25:37,248 p=4278 u=test |  TASK [Gathering Facts] *********************************************************
+2019-03-18 23:25:39,106 p=4278 u=test |  ok: [server2]
+2019-03-18 23:25:39,122 p=4278 u=test |  ok: [server3]
+2019-03-18 23:25:39,195 p=4278 u=test |  TASK [install httpd] ***********************************************************
+2019-03-18 23:25:40,559 p=4278 u=test |  changed: [server2]
+2019-03-18 23:25:40,601 p=4278 u=test |  changed: [server3]
+2019-03-18 23:25:40,603 p=4278 u=test |  PLAY RECAP *********************************************************************
+2019-03-18 23:25:40,603 p=4278 u=test |  server2                    : ok=2    changed=1    unreachable=0    failed=0   
+2019-03-18 23:25:40,603 p=4278 u=test |  server3                    : ok=2    changed=1    unreachable=0    failed=0   
+2019-03-18 23:28:08,080 p=4353 u=test |  PLAY [webserver] ***************************************************************
+2019-03-18 23:28:08,094 p=4353 u=test |  TASK [Gathering Facts] *********************************************************
+2019-03-18 23:28:10,148 p=4353 u=test |  ok: [server2]
+2019-03-18 23:28:10,165 p=4353 u=test |  ok: [server3]
+2019-03-18 23:28:10,208 p=4353 u=test |  TASK [create index.html file] **************************************************
+2019-03-18 23:28:11,502 p=4353 u=test |  ok: [server3]
+2019-03-18 23:28:11,538 p=4353 u=test |  ok: [server2]
+2019-03-18 23:28:11,547 p=4353 u=test |  PLAY RECAP *********************************************************************
+2019-03-18 23:28:11,547 p=4353 u=test |  server2                    : ok=2    changed=0    unreachable=0    failed=0   
+2019-03-18 23:28:11,548 p=4353 u=test |  server3                    : ok=2    changed=0    unreachable=0    failed=0   
+2019-03-18 23:41:12,664 p=4447 u=test |  PLAY [webserver] ***************************************************************
+2019-03-18 23:41:12,682 p=4447 u=test |  TASK [Gathering Facts] *********************************************************
+2019-03-18 23:41:14,750 p=4447 u=test |  ok: [server3]
+2019-03-18 23:41:14,767 p=4447 u=test |  ok: [server2]
+2019-03-18 23:41:14,811 p=4447 u=test |  TASK [install httpd] ***********************************************************
+2019-03-18 23:41:34,030 p=4447 u=test |  changed: [server2] => (item=[u'httpd', u'curl', u'lynx', u'telnet'])
+2019-03-18 23:41:35,206 p=4447 u=test |  changed: [server3] => (item=[u'httpd', u'curl', u'lynx', u'telnet'])
+2019-03-18 23:41:35,210 p=4447 u=test |  PLAY RECAP *********************************************************************
+2019-03-18 23:41:35,211 p=4447 u=test |  server2                    : ok=2    changed=1    unreachable=0    failed=0   
+2019-03-18 23:41:35,211 p=4447 u=test |  server3                    : ok=2    changed=1    unreachable=0    failed=0   
+2019-03-18 23:49:37,292 p=4564 u=test |  PLAY [webserver] ***************************************************************
+2019-03-18 23:49:37,306 p=4564 u=test |  TASK [Gathering Facts] *********************************************************
+2019-03-18 23:49:39,352 p=4564 u=test |  ok: [server3]
+2019-03-18 23:49:39,374 p=4564 u=test |  ok: [server2]
+2019-03-18 23:49:39,418 p=4564 u=test |  TASK [install httpd] ***********************************************************
+2019-03-18 23:49:40,719 p=4564 u=test |  ok: [server2]
+2019-03-18 23:49:40,768 p=4564 u=test |  ok: [server3]
+2019-03-18 23:49:40,818 p=4564 u=test |  TASK [create index.html file] **************************************************
+2019-03-18 23:49:42,463 p=4564 u=test |  ok: [server3]
+2019-03-18 23:49:42,499 p=4564 u=test |  ok: [server2]
+2019-03-18 23:49:42,547 p=4564 u=test |  TASK [start httpd service] *****************************************************
+2019-03-18 23:49:43,483 p=4564 u=test |  ok: [server2]
+2019-03-18 23:49:43,489 p=4564 u=test |  ok: [server3]
+2019-03-18 23:49:43,653 p=4564 u=test |  TASK [debug] *******************************************************************
+2019-03-18 23:49:43,760 p=4564 u=test |  ok: [server2] => {
+    "result": {
+        "changed": false, 
+        "failed": false, 
+        "name": "httpd", 
+        "state": "started"
+    }
+}
+2019-03-18 23:49:43,819 p=4564 u=test |  ok: [server3] => {
+    "result": {
+        "changed": false, 
+        "failed": false, 
+        "name": "httpd", 
+        "state": "started"
+    }
+}
+2019-03-18 23:49:43,829 p=4564 u=test |  PLAY RECAP *********************************************************************
+2019-03-18 23:49:43,829 p=4564 u=test |  server2                    : ok=5    changed=0    unreachable=0    failed=0   
+2019-03-18 23:49:43,830 p=4564 u=test |  server3                    : ok=5    changed=0    unreachable=0    failed=0   
+2019-03-19 00:26:29,379 p=2564 u=test |  ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to have been in '/home/test/playbooks/when.yml': line 8, column 8, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+       yum: name=httpd state=installed
+     - when: ansible_os_family == 'Redhat'
+       ^ here
+
+2019-03-19 00:28:18,673 p=2575 u=test |  ERROR! this task 'copy' has extra params, which is only allowed in the following modules: shell, win_shell, include_vars, add_host, raw, include_role, meta, set_fact, include, import_tasks, script, import_role, include_tasks, group_by, command, win_command
+
+The error appears to have been in '/home/test/playbooks/when.yml': line 12, column 8, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+       when: ansible_os_family == 'Debian'
+     - name: create index.html file
+       ^ here
+
+2019-03-19 00:28:22,393 p=2584 u=test |  ERROR! this task 'copy' has extra params, which is only allowed in the following modules: shell, win_shell, include_vars, add_host, raw, include_role, meta, set_fact, include, import_tasks, script, import_role, include_tasks, group_by, command, win_command
+
+The error appears to have been in '/home/test/playbooks/when.yml': line 12, column 8, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+       when: ansible_os_family == 'Debian'
+     - name: create index.html file
+       ^ here
+
+2019-03-19 00:30:26,804 p=2601 u=test |  ERROR! this task 'copy' has extra params, which is only allowed in the following modules: shell, win_shell, include_vars, add_host, raw, include_role, meta, set_fact, include, import_tasks, script, import_role, include_tasks, group_by, command, win_command
+
+The error appears to have been in '/home/test/playbooks/when.yml': line 12, column 8, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+       when: ansible_os_family == 'Debian'
+     - name: create index.html file
+       ^ here
+
+2019-03-19 00:34:12,214 p=2617 u=test |  PLAY [webserver] ***************************************************************
+2019-03-19 00:34:12,594 p=2617 u=test |  TASK [Gathering Facts] *********************************************************
+2019-03-19 00:34:18,810 p=2617 u=test |  ok: [server2]
+2019-03-19 00:34:18,902 p=2617 u=test |  ok: [server3]
+2019-03-19 00:34:18,950 p=2617 u=test |  TASK [install httpd] ***********************************************************
+2019-03-19 00:34:25,484 p=2617 u=test |  ok: [server3]
+2019-03-19 00:34:25,519 p=2617 u=test |  ok: [server2]
+2019-03-19 00:34:25,566 p=2617 u=test |  TASK [install apache2] *********************************************************
+2019-03-19 00:34:25,648 p=2617 u=test |  skipping: [server2]
+2019-03-19 00:34:25,655 p=2617 u=test |  skipping: [server3]
+2019-03-19 00:34:25,726 p=2617 u=test |  TASK [create index.html file] **************************************************
+2019-03-19 00:34:27,822 p=2617 u=test |  ok: [server2]
+2019-03-19 00:34:27,841 p=2617 u=test |  ok: [server3]
+2019-03-19 00:34:28,053 p=2617 u=test |  TASK [start httpd service] *****************************************************
+2019-03-19 00:34:30,522 p=2617 u=test |  changed: [server3]
+2019-03-19 00:34:30,618 p=2617 u=test |  changed: [server2]
+2019-03-19 00:34:30,620 p=2617 u=test |  PLAY RECAP *********************************************************************
+2019-03-19 00:34:30,620 p=2617 u=test |  server2                    : ok=4    changed=1    unreachable=0    failed=0   
+2019-03-19 00:34:30,621 p=2617 u=test |  server3                    : ok=4    changed=1    unreachable=0    failed=0   
+2019-03-19 00:34:46,553 p=2728 u=test |  PLAY [webserver] ***************************************************************
+2019-03-19 00:34:46,568 p=2728 u=test |  TASK [Gathering Facts] *********************************************************
+2019-03-19 00:34:48,231 p=2728 u=test |  ok: [server3]
+2019-03-19 00:34:48,244 p=2728 u=test |  ok: [server2]
+2019-03-19 00:34:48,291 p=2728 u=test |  TASK [install httpd] ***********************************************************
+2019-03-19 00:34:49,355 p=2728 u=test |  ok: [server3]
+2019-03-19 00:34:49,373 p=2728 u=test |  ok: [server2]
+2019-03-19 00:34:49,422 p=2728 u=test |  TASK [install apache2] *********************************************************
+2019-03-19 00:34:49,491 p=2728 u=test |  skipping: [server2]
+2019-03-19 00:34:49,514 p=2728 u=test |  skipping: [server3]
+2019-03-19 00:34:49,562 p=2728 u=test |  TASK [create index.html file] **************************************************
+2019-03-19 00:34:51,219 p=2728 u=test |  ok: [server2]
+2019-03-19 00:34:51,230 p=2728 u=test |  ok: [server3]
+2019-03-19 00:34:51,283 p=2728 u=test |  TASK [start httpd service] *****************************************************
+2019-03-19 00:34:52,179 p=2728 u=test |  ok: [server2]
+2019-03-19 00:34:52,219 p=2728 u=test |  ok: [server3]
+2019-03-19 00:34:52,224 p=2728 u=test |  PLAY RECAP *********************************************************************
+2019-03-19 00:34:52,224 p=2728 u=test |  server2                    : ok=4    changed=0    unreachable=0    failed=0   
+2019-03-19 00:34:52,224 p=2728 u=test |  server3                    : ok=4    changed=0    unreachable=0    failed=0   
+2019-03-19 12:30:41,045 p=2567 u=test |  PLAY [webserver] ***************************************************************
+2019-03-19 12:30:41,495 p=2567 u=test |  TASK [Gathering Facts] *********************************************************
+2019-03-19 12:30:48,192 p=2567 u=test |  ok: [server3]
+2019-03-19 12:30:48,304 p=2567 u=test |  ok: [server2]
+2019-03-19 12:30:48,391 p=2567 u=test |  TASK [start httpd service] *****************************************************
+2019-03-19 12:30:50,968 p=2567 u=test |  changed: [server3]
+2019-03-19 12:30:51,100 p=2567 u=test |  changed: [server2]
+2019-03-19 12:30:51,104 p=2567 u=test |  PLAY RECAP *********************************************************************
+2019-03-19 12:30:51,104 p=2567 u=test |  server2                    : ok=2    changed=1    unreachable=0    failed=0   
+2019-03-19 12:30:51,105 p=2567 u=test |  server3                    : ok=2    changed=1    unreachable=0    failed=0   
+2019-03-19 12:32:25,635 p=2625 u=test |  server2 | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+2019-03-19 12:32:25,685 p=2625 u=test |  server3 | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+2019-03-19 12:35:11,828 p=2667 u=test |  PLAY [webserver] ***************************************************************
+2019-03-19 12:35:11,853 p=2667 u=test |  TASK [Gathering Facts] *********************************************************
+2019-03-19 12:35:13,655 p=2667 u=test |  ok: [server2]
+2019-03-19 12:35:13,679 p=2667 u=test |  ok: [server3]
+2019-03-19 12:35:13,726 p=2667 u=test |  TASK [install httpd] ***********************************************************
+2019-03-19 12:35:15,796 p=2667 u=test |  ok: [server2]
+2019-03-19 12:35:17,999 p=2667 u=test |  ok: [server3]
+2019-03-19 12:35:18,044 p=2667 u=test |  TASK [start httpd service] *****************************************************
+2019-03-19 12:35:18,946 p=2667 u=test |  ok: [server3]
+2019-03-19 12:35:18,950 p=2667 u=test |  ok: [server2]
+2019-03-19 12:35:18,956 p=2667 u=test |  PLAY RECAP *********************************************************************
+2019-03-19 12:35:18,956 p=2667 u=test |  server2                    : ok=3    changed=0    unreachable=0    failed=0   
+2019-03-19 12:35:18,956 p=2667 u=test |  server3                    : ok=3    changed=0    unreachable=0    failed=0   
+2019-03-19 12:36:46,629 p=2742 u=test |  PLAY [webserver] ***************************************************************
+2019-03-19 12:36:46,648 p=2742 u=test |  TASK [Gathering Facts] *********************************************************
+2019-03-19 12:36:48,449 p=2742 u=test |  ok: [server3]
+2019-03-19 12:36:48,463 p=2742 u=test |  ok: [server2]
+2019-03-19 12:36:48,549 p=2742 u=test |  TASK [create index.html file] **************************************************
+2019-03-19 12:36:50,520 p=2742 u=test |  ok: [server3]
+2019-03-19 12:36:50,559 p=2742 u=test |  ok: [server2]
+2019-03-19 12:36:50,608 p=2742 u=test |  TASK [start httpd service] *****************************************************
+2019-03-19 12:36:51,523 p=2742 u=test |  ok: [server3]
+2019-03-19 12:36:51,559 p=2742 u=test |  ok: [server2]
+2019-03-19 12:36:51,563 p=2742 u=test |  PLAY RECAP *********************************************************************
+2019-03-19 12:36:51,563 p=2742 u=test |  server2                    : ok=3    changed=0    unreachable=0    failed=0   
+2019-03-19 12:36:51,564 p=2742 u=test |  server3                    : ok=3    changed=0    unreachable=0    failed=0   
+2019-03-19 12:37:40,744 p=2832 u=test |  PLAY [webserver] ***************************************************************
+2019-03-19 12:37:46,116 p=2832 u=test |  Perform task: TASK: Gathering Facts (N)o/(y)es/(c)ontinue: *********************
+2019-03-19 12:37:46,133 p=2832 u=test |  TASK [Gathering Facts] *********************************************************
+2019-03-19 12:37:48,315 p=2832 u=test |  ok: [server3]
+2019-03-19 12:37:48,333 p=2832 u=test |  ok: [server2]
+2019-03-19 12:37:51,213 p=2832 u=test |  Perform task: TASK: install httpd (N)o/(y)es/(c)ontinue: ***********************
+2019-03-19 12:37:51,271 p=2832 u=test |  TASK [install httpd] ***********************************************************
+2019-03-19 12:37:52,572 p=2832 u=test |  ok: [server3]
+2019-03-19 12:37:52,655 p=2832 u=test |  ok: [server2]
+2019-03-19 12:37:55,538 p=2832 u=test |  Perform task: TASK: create index.html file (N)o/(y)es/(c)ontinue: **************
+2019-03-19 12:37:55,587 p=2832 u=test |  TASK [create index.html file] **************************************************
+2019-03-19 12:37:57,336 p=2832 u=test |  ok: [server3]
+2019-03-19 12:37:57,336 p=2832 u=test |  ok: [server2]
+2019-03-19 12:37:59,858 p=2832 u=test |  Perform task: TASK: start httpd service (N)o/(y)es/(c)ontinue: *****************
+2019-03-19 12:37:59,917 p=2832 u=test |  TASK [start httpd service] *****************************************************
+2019-03-19 12:38:00,971 p=2832 u=test |  ok: [server2]
+2019-03-19 12:38:01,015 p=2832 u=test |  ok: [server3]
+2019-03-19 12:38:01,018 p=2832 u=test |  PLAY RECAP *********************************************************************
+2019-03-19 12:38:01,018 p=2832 u=test |  server2                    : ok=4    changed=0    unreachable=0    failed=0   
+2019-03-19 12:38:01,018 p=2832 u=test |  server3                    : ok=4    changed=0    unreachable=0    failed=0   
+2019-03-19 16:06:47,140 p=2577 u=test |  PLAY [webserver] ***************************************************************
+2019-03-19 16:06:47,685 p=2577 u=test |  TASK [Gathering Facts] *********************************************************
+2019-03-19 16:06:59,711 p=2577 u=test |  ok: [server2]
+2019-03-19 16:06:59,741 p=2577 u=test |  ok: [server3]
+2019-03-19 16:06:59,993 p=2577 u=test |  TASK [install httpd] ***********************************************************
+2019-03-19 16:07:18,740 p=2577 u=test |   [WARNING]: Consider using the yum module rather than running yum.  If you need
+to use command because yum is insufficient you can add warn=False to this
+command task or set command_warnings=False in ansible.cfg to get rid of this
+message.
+
+2019-03-19 16:07:18,741 p=2577 u=test |  changed: [server3]
+2019-03-19 16:07:18,935 p=2577 u=test |  changed: [server2]
+2019-03-19 16:07:19,020 p=2577 u=test |  TASK [create index.html file] **************************************************
+2019-03-19 16:07:20,002 p=2577 u=test |  changed: [server2]
+2019-03-19 16:07:21,085 p=2577 u=test |  changed: [server3]
+2019-03-19 16:07:21,305 p=2577 u=test |  TASK [start httpd service] *****************************************************
+2019-03-19 16:07:30,470 p=2577 u=test |  changed: [server3]
+2019-03-19 16:07:31,812 p=2577 u=test |  changed: [server2]
+2019-03-19 16:07:31,894 p=2577 u=test |  TASK [execute shell script] ****************************************************
+2019-03-19 16:07:32,361 p=2577 u=test |  changed: [server2]
+2019-03-19 16:07:32,447 p=2577 u=test |  changed: [server3]
+2019-03-19 16:07:32,450 p=2577 u=test |  PLAY RECAP *********************************************************************
+2019-03-19 16:07:32,450 p=2577 u=test |  server2                    : ok=5    changed=4    unreachable=0    failed=0   
+2019-03-19 16:07:32,451 p=2577 u=test |  server3                    : ok=5    changed=4    unreachable=0    failed=0   
+2019-03-19 16:15:28,979 p=2694 u=test |  PLAY [webserver] ***************************************************************
+2019-03-19 16:15:28,997 p=2694 u=test |  TASK [Gathering Facts] *********************************************************
+2019-03-19 16:15:30,806 p=2694 u=test |  ok: [server2]
+2019-03-19 16:15:30,821 p=2694 u=test |  ok: [server3]
+2019-03-19 16:15:30,867 p=2694 u=test |  TASK [install httpd] ***********************************************************
+2019-03-19 16:15:56,514 p=2694 u=test |   [WARNING]: Consider using the yum module rather than running yum.  If you need
+to use command because yum is insufficient you can add warn=False to this
+command task or set command_warnings=False in ansible.cfg to get rid of this
+message.
+
+2019-03-19 16:15:56,514 p=2694 u=test |  changed: [server2]
+2019-03-19 16:15:56,554 p=2694 u=test |  changed: [server3]
+2019-03-19 16:15:56,597 p=2694 u=test |  TASK [create index.html file] **************************************************
+2019-03-19 16:15:57,235 p=2694 u=test |  changed: [server2]
+2019-03-19 16:15:57,291 p=2694 u=test |  changed: [server3]
+2019-03-19 16:15:57,340 p=2694 u=test |  TASK [start httpd service] *****************************************************
+2019-03-19 16:15:57,525 p=2694 u=test |  changed: [server2]
+2019-03-19 16:15:57,589 p=2694 u=test |  changed: [server3]
+2019-03-19 16:15:57,644 p=2694 u=test |  TASK [execute shell script] ****************************************************
+2019-03-19 16:15:58,140 p=2694 u=test |  fatal: [server2]: FAILED! => {"changed": true, "msg": "non-zero return code", "rc": 1, "stderr": "Shared connection to server2 closed.\r\n", "stderr_lines": ["Shared connection to server2 closed."], "stdout": "mkdir: cannot create directory `ppp': File exists\r\n", "stdout_lines": ["mkdir: cannot create directory `ppp': File exists"]}
+2019-03-19 16:15:58,235 p=2694 u=test |  fatal: [server3]: FAILED! => {"changed": true, "msg": "non-zero return code", "rc": 1, "stderr": "Shared connection to server3 closed.\r\n", "stderr_lines": ["Shared connection to server3 closed."], "stdout": "mkdir: cannot create directory `ppp': File exists\r\n", "stdout_lines": ["mkdir: cannot create directory `ppp': File exists"]}
+2019-03-19 16:15:58,239 p=2694 u=test |  	to retry, use: --limit @/home/test/playbooks/command.retry
+
+2019-03-19 16:15:58,240 p=2694 u=test |  PLAY RECAP *********************************************************************
+2019-03-19 16:15:58,240 p=2694 u=test |  server2                    : ok=4    changed=3    unreachable=0    failed=1   
+2019-03-19 16:15:58,240 p=2694 u=test |  server3                    : ok=4    changed=3    unreachable=0    failed=1   
+2019-03-19 16:16:35,701 p=2793 u=test |  PLAY [webserver] ***************************************************************
+2019-03-19 16:16:35,718 p=2793 u=test |  TASK [Gathering Facts] *********************************************************
+2019-03-19 16:16:37,599 p=2793 u=test |  ok: [server2]
+2019-03-19 16:16:37,611 p=2793 u=test |  ok: [server3]
+2019-03-19 16:16:37,661 p=2793 u=test |  TASK [install httpd] ***********************************************************
+2019-03-19 16:16:39,615 p=2793 u=test |   [WARNING]: Consider using the yum module rather than running yum.  If you need
+to use command because yum is insufficient you can add warn=False to this
+command task or set command_warnings=False in ansible.cfg to get rid of this
+message.
+
+2019-03-19 16:16:39,615 p=2793 u=test |  changed: [server2]
+2019-03-19 16:16:39,825 p=2793 u=test |  changed: [server3]
+2019-03-19 16:16:39,879 p=2793 u=test |  TASK [create index.html file] **************************************************
+2019-03-19 16:16:40,474 p=2793 u=test |  changed: [server2]
+2019-03-19 16:16:40,608 p=2793 u=test |  changed: [server3]
+2019-03-19 16:16:40,655 p=2793 u=test |  TASK [start httpd service] *****************************************************
+2019-03-19 16:16:40,853 p=2793 u=test |  changed: [server2]
+2019-03-19 16:16:40,903 p=2793 u=test |  changed: [server3]
+2019-03-19 16:16:40,956 p=2793 u=test |  TASK [execute shell script] ****************************************************
+2019-03-19 16:16:41,429 p=2793 u=test |  fatal: [server2]: FAILED! => {"changed": true, "msg": "non-zero return code", "rc": 1, "stderr": "Shared connection to server2 closed.\r\n", "stderr_lines": ["Shared connection to server2 closed."], "stdout": "mkdir: cannot create directory `ppp': File exists\r\n", "stdout_lines": ["mkdir: cannot create directory `ppp': File exists"]}
+2019-03-19 16:16:41,510 p=2793 u=test |  fatal: [server3]: FAILED! => {"changed": true, "msg": "non-zero return code", "rc": 1, "stderr": "Shared connection to server3 closed.\r\n", "stderr_lines": ["Shared connection to server3 closed."], "stdout": "mkdir: cannot create directory `ppp': File exists\r\n", "stdout_lines": ["mkdir: cannot create directory `ppp': File exists"]}
+2019-03-19 16:16:41,512 p=2793 u=test |  	to retry, use: --limit @/home/test/playbooks/command.retry
+
+2019-03-19 16:16:41,512 p=2793 u=test |  PLAY RECAP *********************************************************************
+2019-03-19 16:16:41,512 p=2793 u=test |  server2                    : ok=4    changed=3    unreachable=0    failed=1   
+2019-03-19 16:16:41,513 p=2793 u=test |  server3                    : ok=4    changed=3    unreachable=0    failed=1   
+2019-03-19 16:17:03,429 p=2884 u=test |  PLAY [webserver] ***************************************************************
+2019-03-19 16:17:03,444 p=2884 u=test |  TASK [Gathering Facts] *********************************************************
+2019-03-19 16:17:05,601 p=2884 u=test |  ok: [server3]
+2019-03-19 16:17:05,614 p=2884 u=test |  ok: [server2]
+2019-03-19 16:17:05,662 p=2884 u=test |  TASK [install httpd] ***********************************************************
+2019-03-19 16:17:07,373 p=2884 u=test |   [WARNING]: Consider using the yum module rather than running yum.  If you need
+to use command because yum is insufficient you can add warn=False to this
+command task or set command_warnings=False in ansible.cfg to get rid of this
+message.
+
+2019-03-19 16:17:07,374 p=2884 u=test |  changed: [server2]
+2019-03-19 16:17:07,470 p=2884 u=test |  changed: [server3]
+2019-03-19 16:17:07,516 p=2884 u=test |  TASK [create index.html file] **************************************************
+2019-03-19 16:17:08,183 p=2884 u=test |  changed: [server2]
+2019-03-19 16:17:08,217 p=2884 u=test |  changed: [server3]
+2019-03-19 16:17:08,269 p=2884 u=test |  TASK [start httpd service] *****************************************************
+2019-03-19 16:17:08,462 p=2884 u=test |  changed: [server2]
+2019-03-19 16:17:08,531 p=2884 u=test |  changed: [server3]
+2019-03-19 16:17:08,591 p=2884 u=test |  TASK [execute shell script] ****************************************************
+2019-03-19 16:17:09,059 p=2884 u=test |  fatal: [server2]: FAILED! => {"changed": true, "msg": "non-zero return code", "rc": 1, "stderr": "Shared connection to server2 closed.\r\n", "stderr_lines": ["Shared connection to server2 closed."], "stdout": "mkdir: cannot create directory `ppp': File exists\r\n", "stdout_lines": ["mkdir: cannot create directory `ppp': File exists"]}
+2019-03-19 16:17:09,142 p=2884 u=test |  fatal: [server3]: FAILED! => {"changed": true, "msg": "non-zero return code", "rc": 1, "stderr": "Shared connection to server3 closed.\r\n", "stderr_lines": ["Shared connection to server3 closed."], "stdout": "mkdir: cannot create directory `ppp': File exists\r\n", "stdout_lines": ["mkdir: cannot create directory `ppp': File exists"]}
+2019-03-19 16:17:09,144 p=2884 u=test |  	to retry, use: --limit @/home/test/playbooks/command.retry
+
+2019-03-19 16:17:09,144 p=2884 u=test |  PLAY RECAP *********************************************************************
+2019-03-19 16:17:09,144 p=2884 u=test |  server2                    : ok=4    changed=3    unreachable=0    failed=1   
+2019-03-19 16:17:09,144 p=2884 u=test |  server3                    : ok=4    changed=3    unreachable=0    failed=1   
+2019-03-19 16:18:11,649 p=2978 u=test |  PLAY [webserver] ***************************************************************
+2019-03-19 16:18:11,672 p=2978 u=test |  TASK [Gathering Facts] *********************************************************
+2019-03-19 16:18:13,571 p=2978 u=test |  ok: [server2]
+2019-03-19 16:18:13,594 p=2978 u=test |  ok: [server3]
+2019-03-19 16:18:13,647 p=2978 u=test |  TASK [install httpd] ***********************************************************
+2019-03-19 16:18:14,445 p=2978 u=test |  ok: [server2]
+2019-03-19 16:18:14,449 p=2978 u=test |  ok: [server3]
+2019-03-19 16:18:14,499 p=2978 u=test |  TASK [create index.html file] **************************************************
+2019-03-19 16:18:15,103 p=2978 u=test |  changed: [server2]
+2019-03-19 16:18:15,224 p=2978 u=test |  changed: [server3]
+2019-03-19 16:18:15,274 p=2978 u=test |  TASK [start httpd service] *****************************************************
+2019-03-19 16:18:15,458 p=2978 u=test |  changed: [server2]
+2019-03-19 16:18:15,516 p=2978 u=test |  changed: [server3]
+2019-03-19 16:18:15,564 p=2978 u=test |  TASK [execute shell script] ****************************************************
+2019-03-19 16:18:16,051 p=2978 u=test |  fatal: [server2]: FAILED! => {"changed": true, "msg": "non-zero return code", "rc": 1, "stderr": "Shared connection to server2 closed.\r\n", "stderr_lines": ["Shared connection to server2 closed."], "stdout": "mkdir: cannot create directory `ppp': File exists\r\n", "stdout_lines": ["mkdir: cannot create directory `ppp': File exists"]}
+2019-03-19 16:18:16,105 p=2978 u=test |  fatal: [server3]: FAILED! => {"changed": true, "msg": "non-zero return code", "rc": 1, "stderr": "Shared connection to server3 closed.\r\n", "stderr_lines": ["Shared connection to server3 closed."], "stdout": "mkdir: cannot create directory `ppp': File exists\r\n", "stdout_lines": ["mkdir: cannot create directory `ppp': File exists"]}
+2019-03-19 16:18:16,108 p=2978 u=test |  	to retry, use: --limit @/home/test/playbooks/command.retry
+
+2019-03-19 16:18:16,108 p=2978 u=test |  PLAY RECAP *********************************************************************
+2019-03-19 16:18:16,108 p=2978 u=test |  server2                    : ok=4    changed=2    unreachable=0    failed=1   
+2019-03-19 16:18:16,108 p=2978 u=test |  server3                    : ok=4    changed=2    unreachable=0    failed=1   
+2019-03-19 17:27:17,900 p=3247 u=test |  ERROR! Syntax Error while loading YAML.
+  mapping values are not allowed in this context
+
+The error appears to have been in '/home/test/playbooks/tomcat1.yml': line 10, column 172, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+     - name: Download Tomcat
+       get_url: url=http://mirrors.estointernet.in/apache/tomcat/tomcat-7/v7.0.92/bin/apache-tomcat-7.0.92-deployer.tar.gz dest=/tmp                                 - name: Create tomcat folder
+                                                                                                                                                                           ^ here
+
+2019-03-19 17:29:13,452 p=3257 u=test |  ERROR! Syntax Error while loading YAML.
+  mapping values are not allowed in this context
+
+The error appears to have been in '/home/test/playbooks/tomcat1.yml': line 10, column 172, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+     - name: Download Tomcat
+       get_url: url=http://mirrors.estointernet.in/apache/tomcat/tomcat-7/v7.O.92/bin/apache-tomcat-7.O.92-deployer.tar.gz dest=/tmp                                 - name: Create tomcat folder
+                                                                                                                                                                           ^ here
+
+2019-03-19 17:35:43,992 p=3281 u=test |  ERROR! the playbook: [A could not be found
+2019-03-19 17:35:49,342 p=3286 u=test |  PLAY [server2] *****************************************************************
+2019-03-19 17:35:49,359 p=3286 u=test |  TASK [Gathering Facts] *********************************************************
+2019-03-19 17:35:50,804 p=3286 u=test |  ok: [server2]
+2019-03-19 17:35:50,857 p=3286 u=test |  TASK [Remove older version of tomcat] ******************************************
+2019-03-19 17:35:51,517 p=3286 u=test |  ok: [server2]
+2019-03-19 17:35:51,564 p=3286 u=test |  TASK [Download Tomcat] *********************************************************
+2019-03-19 17:35:53,106 p=3286 u=test |  fatal: [server2]: FAILED! => {"changed": false, "dest": "/tmp", "gid": 0, "group": "root", "mode": "01777", "msg": "Request failed", "owner": "root", "response": "HTTP Error 404: Not Found", "size": 4096, "state": "directory", "status_code": 404, "uid": 0, "url": "http://mirrors.estointernet.in/apache/tomcat/tomcat-7/v7.0.92/bin/apache-tomcat-7.0.92-deployer.tar.gz"}
+2019-03-19 17:35:53,107 p=3286 u=test |  	to retry, use: --limit @/home/test/playbooks/tomcat1.retry
+
+2019-03-19 17:35:53,107 p=3286 u=test |  PLAY RECAP *********************************************************************
+2019-03-19 17:35:53,108 p=3286 u=test |  server2                    : ok=2    changed=0    unreachable=0    failed=1   
+2019-03-19 17:36:34,321 p=3329 u=test |  PLAY [server2] *****************************************************************
+2019-03-19 17:36:34,336 p=3329 u=test |  TASK [Gathering Facts] *********************************************************
+2019-03-19 17:36:35,708 p=3329 u=test |  ok: [server2]
+2019-03-19 17:36:35,755 p=3329 u=test |  TASK [Remove older version of tomcat] ******************************************
+2019-03-19 17:36:36,436 p=3329 u=test |  ok: [server2]
+2019-03-19 17:36:36,484 p=3329 u=test |  TASK [Download Tomcat] *********************************************************
+2019-03-19 17:36:37,605 p=3329 u=test |  fatal: [server2]: FAILED! => {"changed": false, "dest": "/tmp", "gid": 0, "group": "root", "mode": "01777", "msg": "Request failed", "owner": "root", "response": "HTTP Error 404: Not Found", "size": 4096, "state": "directory", "status_code": 404, "uid": 0, "url": "http://mirrors.estointernet.in/apache/tomcat/tomcat-7/v7.0.92/bin/apache-tomcat-7.0.92-deployer.tar.gz"}
+2019-03-19 17:36:37,609 p=3329 u=test |  	to retry, use: --limit @/home/test/playbooks/tomcat1.retry
+
+2019-03-19 17:36:37,609 p=3329 u=test |  PLAY RECAP *********************************************************************
+2019-03-19 17:36:37,609 p=3329 u=test |  server2                    : ok=2    changed=0    unreachable=0    failed=1   
+2019-03-19 17:44:47,935 p=3388 u=test |  PLAY [server2] *****************************************************************
+2019-03-19 17:44:47,951 p=3388 u=test |  TASK [Gathering Facts] *********************************************************
+2019-03-19 17:44:49,367 p=3388 u=test |  ok: [server2]
+2019-03-19 17:44:49,422 p=3388 u=test |  TASK [Remove older version of tomcat] ******************************************
+2019-03-19 17:44:50,064 p=3388 u=test |  ok: [server2]
+2019-03-19 17:44:50,110 p=3388 u=test |  TASK [Download Tomcat] *********************************************************
+2019-03-19 17:44:51,207 p=3388 u=test |  fatal: [server2]: FAILED! => {"changed": false, "dest": "/tmp", "gid": 0, "group": "root", "mode": "01777", "msg": "Request failed", "owner": "root", "response": "HTTP Error 404: Not Found", "size": 4096, "state": "directory", "status_code": 404, "uid": 0, "url": "http://mirrors.estointernet.in/apache/tomcat/tomcat-7/v7.0.92/bin/apache-tomcat-7.0.92-deployer.tar.gz"}
+2019-03-19 17:44:51,211 p=3388 u=test |  	to retry, use: --limit @/home/test/playbooks/tomcat1.retry
+
+2019-03-19 17:44:51,211 p=3388 u=test |  PLAY RECAP *********************************************************************
+2019-03-19 17:44:51,211 p=3388 u=test |  server2                    : ok=2    changed=0    unreachable=0    failed=1   
+2019-03-19 17:59:16,816 p=3478 u=test |  PLAY [server2] *****************************************************************
+2019-03-19 17:59:16,835 p=3478 u=test |  TASK [Gathering Facts] *********************************************************
+2019-03-19 17:59:18,353 p=3478 u=test |  ok: [server2]
+2019-03-19 17:59:18,395 p=3478 u=test |  TASK [Remove older version of tomcat] ******************************************
+2019-03-19 17:59:19,045 p=3478 u=test |  ok: [server2]
+2019-03-19 17:59:19,092 p=3478 u=test |  TASK [Download Tomcat] *********************************************************
+2019-03-19 17:59:22,465 p=3478 u=test |  fatal: [server2]: FAILED! => {"changed": false, "dest": "/tmp", "gid": 0, "group": "root", "mode": "01777", "msg": "Request failed", "owner": "root", "response": "HTTP Error 404: Not Found", "size": 4096, "state": "directory", "status_code": 404, "uid": 0, "url": "http://mirrors.estointernet.in/apache/tomcat/tomcat-7/v7.0.92/bin/apache-tomcat-7.0.92-deployer.tar.gz"}
+2019-03-19 17:59:22,467 p=3478 u=test |  	to retry, use: --limit @/home/test/playbooks/tomcat1.retry
+
+2019-03-19 17:59:22,467 p=3478 u=test |  PLAY RECAP *********************************************************************
+2019-03-19 17:59:22,468 p=3478 u=test |  server2                    : ok=2    changed=0    unreachable=0    failed=1   
+2019-03-19 18:20:03,269 p=3709 u=test |  PLAY [server2] *****************************************************************
+2019-03-19 18:20:03,288 p=3709 u=test |  TASK [Gathering Facts] *********************************************************
+2019-03-19 18:20:36,188 p=3709 u=test |  ok: [server2]
+2019-03-19 18:20:36,227 p=3709 u=test |  TASK [Remove older version of tomcat] ******************************************
+2019-03-19 18:20:36,920 p=3709 u=test |  ok: [server2]
+2019-03-19 18:20:36,971 p=3709 u=test |  TASK [Download Tomcat] *********************************************************
+2019-03-19 18:20:38,167 p=3709 u=test |  fatal: [server2]: FAILED! => {"changed": false, "dest": "/tmp", "gid": 0, "group": "root", "mode": "01777", "msg": "Request failed", "owner": "root", "response": "HTTP Error 404: Not Found", "size": 4096, "state": "directory", "status_code": 404, "uid": 0, "url": "http://mirrors.estointernet.in/apache/tomcat/tomcat-7/v7.0.92/bin/apache-tomcat-7.0.92-deployer.tar.gz"}
+2019-03-19 18:20:38,171 p=3709 u=test |  	to retry, use: --limit @/home/test/playbooks/tomcat1.retry
+
+2019-03-19 18:20:38,171 p=3709 u=test |  PLAY RECAP *********************************************************************
+2019-03-19 18:20:38,171 p=3709 u=test |  server2                    : ok=2    changed=0    unreachable=0    failed=1   
+2019-03-19 18:35:09,753 p=3786 u=test |  PLAY [server2] *****************************************************************
+2019-03-19 18:35:09,770 p=3786 u=test |  TASK [Gathering Facts] *********************************************************
+2019-03-19 18:35:11,213 p=3786 u=test |  ok: [server2]
+2019-03-19 18:35:11,255 p=3786 u=test |  TASK [install openjdk] *********************************************************
+2019-03-19 18:35:16,779 p=3786 u=test |  fatal: [server2]: FAILED! => {"changed": false, "msg": "No package matching 'openjdk-1.8.0' found available, installed or updated", "rc": 126, "results": ["No package matching 'openjdk-1.8.0' found available, installed or updated"]}
+2019-03-19 18:35:16,781 p=3786 u=test |  	to retry, use: --limit @/home/test/playbooks/tomcat1.retry
+
+2019-03-19 18:35:16,781 p=3786 u=test |  PLAY RECAP *********************************************************************
+2019-03-19 18:35:16,781 p=3786 u=test |  server2                    : ok=1    changed=0    unreachable=0    failed=1   
+2019-03-19 18:43:00,630 p=3840 u=test |  PLAY [server2] *****************************************************************
+2019-03-19 18:43:00,653 p=3840 u=test |  TASK [Gathering Facts] *********************************************************
+2019-03-19 18:43:00,955 p=3840 u=test |  fatal: [server2]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).", "unreachable": true}
+2019-03-19 18:43:00,957 p=3840 u=test |  	to retry, use: --limit @/home/test/playbooks/tomcat1.retry
+
+2019-03-19 18:43:00,957 p=3840 u=test |  PLAY RECAP *********************************************************************
+2019-03-19 18:43:00,957 p=3840 u=test |  server2                    : ok=0    changed=0    unreachable=1    failed=0   
+2019-03-19 18:44:01,875 p=3875 u=test |  PLAY [server2] *****************************************************************
+2019-03-19 18:44:01,897 p=3875 u=test |  TASK [Gathering Facts] *********************************************************
+2019-03-19 18:44:02,034 p=3875 u=test |  fatal: [server2]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).", "unreachable": true}
+2019-03-19 18:44:02,036 p=3875 u=test |  	to retry, use: --limit @/home/test/playbooks/tomcat1.retry
+
+2019-03-19 18:44:02,036 p=3875 u=test |  PLAY RECAP *********************************************************************
+2019-03-19 18:44:02,036 p=3875 u=test |  server2                    : ok=0    changed=0    unreachable=1    failed=0   
+2019-03-19 18:44:47,716 p=3894 u=test |  PLAY [server2] *****************************************************************
+2019-03-19 18:44:47,735 p=3894 u=test |  TASK [Gathering Facts] *********************************************************
+2019-03-19 18:44:50,318 p=3894 u=test |  ok: [server2]
+2019-03-19 18:44:50,365 p=3894 u=test |  TASK [install openjdk] *********************************************************
+2019-03-19 20:46:28,287 p=2561 u=test |  PLAY [server2] *****************************************************************
+2019-03-19 20:46:28,698 p=2561 u=test |  TASK [Gathering Facts] *********************************************************
+2019-03-19 20:46:31,947 p=2561 u=test |  fatal: [server2]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Control socket connect(/home/test/.ansible/cp/041a77c09d): Connection refused\r\nssh: connect to host server2 port 22: No route to host", "unreachable": true}
+2019-03-19 20:46:31,988 p=2561 u=test |  	to retry, use: --limit @/home/test/playbooks/tomcat1.retry
+
+2019-03-19 20:46:31,988 p=2561 u=test |  PLAY RECAP *********************************************************************
+2019-03-19 20:46:31,988 p=2561 u=test |  server2                    : ok=0    changed=0    unreachable=1    failed=0   
+2019-03-19 20:55:45,764 p=2607 u=test |  PLAY [webserver] ***************************************************************
+2019-03-19 20:55:45,786 p=2607 u=test |  TASK [Gathering Facts] *********************************************************
+2019-03-19 20:55:48,918 p=2607 u=test |  fatal: [server2]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Control socket connect(/home/test/.ansible/cp/041a77c09d): Connection refused\r\nssh: connect to host server2 port 22: No route to host", "unreachable": true}
+2019-03-19 20:55:48,924 p=2607 u=test |  fatal: [server3]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host server3 port 22: No route to host", "unreachable": true}
+2019-03-19 20:55:48,925 p=2607 u=test |  	to retry, use: --limit @/home/test/playbooks/include.retry
+
+2019-03-19 20:55:48,926 p=2607 u=test |  PLAY RECAP *********************************************************************
+2019-03-19 20:55:48,926 p=2607 u=test |  server2                    : ok=0    changed=0    unreachable=1    failed=0   
+2019-03-19 20:55:48,926 p=2607 u=test |  server3                    : ok=0    changed=0    unreachable=1    failed=0   
+2019-03-19 21:05:51,497 p=2662 u=test |  ERROR! Missing required action
+2019-03-19 21:06:18,714 p=2669 u=test |  - webserver was created successfully
+2019-03-19 21:29:17,123 p=2741 u=test |  ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to have been in '/home/test/playbooks/roles/webserver/tasks/main.yml': line 5, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  yum: name=httpd state=installed
+- name: create index.html
+  ^ here
+
+2019-03-19 21:34:40,501 p=2775 u=test |  ERROR! - the directory ./webserver already exists.you can use --force to re-initialize this directory,
+however it will reset any main.yml files that may have
+been modified there already.
+2019-03-19 21:40:00,210 p=2798 u=test |  ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to have been in '/home/test/playbooks/roles/webserver/tasks/main.yml': line 5, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  yum: name=httpd state=installed
+- name: create index.html
+  ^ here
+
+2019-03-19 21:40:08,623 p=2810 u=test |  ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to have been in '/home/test/playbooks/roles/webserver/tasks/main.yml': line 5, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  yum: name=httpd state=installed
+- name: create index.html
+  ^ here
+
+2019-03-19 21:42:13,731 p=2824 u=test |  ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to have been in '/home/test/playbooks/roles/webserver/tasks/main.yml': line 5, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  yum: name=httpd state=installed
+- name: create index.html
+  ^ here
+
+2019-03-19 21:47:02,840 p=2847 u=test |  PLAY [webserver] ***************************************************************
+2019-03-19 21:47:02,864 p=2847 u=test |  TASK [Gathering Facts] *********************************************************
+2019-03-19 21:47:08,447 p=2847 u=test |  ok: [server3]
+2019-03-19 21:47:08,501 p=2847 u=test |  ok: [server2]
+2019-03-19 21:47:08,546 p=2847 u=test |  TASK [webserver : install httpd] ***********************************************
+2019-03-19 21:47:16,565 p=2847 u=test |  ok: [server3]
+2019-03-19 21:47:16,849 p=2847 u=test |  ok: [server2]
+2019-03-19 21:47:16,927 p=2847 u=test |  TASK [webserver : create index.html] *******************************************
+2019-03-19 21:47:19,455 p=2847 u=test |  changed: [server3]
+2019-03-19 21:47:19,669 p=2847 u=test |  changed: [server2]
+2019-03-19 21:47:19,732 p=2847 u=test |  TASK [webserver : start httpd service] *****************************************
+2019-03-19 21:47:22,354 p=2847 u=test |  changed: [server3]
+2019-03-19 21:47:22,591 p=2847 u=test |  changed: [server2]
+2019-03-19 21:47:22,592 p=2847 u=test |  RUNNING HANDLER [webserver : restart httpd] ************************************
+2019-03-19 21:47:23,677 p=2847 u=test |  changed: [server3]
+2019-03-19 21:47:24,029 p=2847 u=test |  changed: [server2]
+2019-03-19 21:47:24,033 p=2847 u=test |  PLAY RECAP *********************************************************************
+2019-03-19 21:47:24,033 p=2847 u=test |  server2                    : ok=5    changed=3    unreachable=0    failed=0   
+2019-03-19 21:47:24,033 p=2847 u=test |  server3                    : ok=5    changed=3    unreachable=0    failed=0   
+2019-03-20 01:13:53,753 p=4082 u=test |  - mysql was created successfully
+2019-03-20 16:21:51,415 p=2539 u=test |  PLAY [server2] *****************************************************************
+2019-03-20 16:21:51,862 p=2539 u=test |  TASK [Gathering Facts] *********************************************************
+2019-03-20 16:21:55,653 p=2539 u=test |  ok: [server2]
+2019-03-20 16:21:55,703 p=2539 u=test |  TASK [webserver : install httpd] ***********************************************
+2019-03-20 16:21:59,299 p=2539 u=test |  ok: [server2]
+2019-03-20 16:21:59,416 p=2539 u=test |  TASK [webserver : create index.html] *******************************************
+2019-03-20 16:22:01,943 p=2539 u=test |  ok: [server2]
+2019-03-20 16:22:02,011 p=2539 u=test |  TASK [webserver : start httpd service] *****************************************
+2019-03-20 16:22:04,210 p=2539 u=test |  changed: [server2]
+2019-03-20 16:22:04,259 p=2539 u=test |  TASK [mysql : install mysql server] ********************************************
+2019-03-20 16:23:53,529 p=2539 u=test |  changed: [server2]
+2019-03-20 16:23:53,638 p=2539 u=test |  TASK [mysql : create mysql config] *********************************************
+2019-03-20 16:23:55,344 p=2539 u=test |  changed: [server2]
+2019-03-20 16:23:55,393 p=2539 u=test |  TASK [mysql : start mysql server] **********************************************
+2019-03-20 16:24:04,582 p=2539 u=test |  changed: [server2]
+2019-03-20 16:24:04,583 p=2539 u=test |  RUNNING HANDLER [mysql : restart mysql service] ********************************
+2019-03-20 16:24:04,884 p=2539 u=test |  fatal: [server2]: FAILED! => {"msg": "template error while templating string: expected token 'end of print statement', got 'service'. String: {{ mysql service }}"}
+2019-03-20 16:24:04,885 p=2539 u=test |  NO MORE HOSTS LEFT *************************************************************
+2019-03-20 16:24:04,886 p=2539 u=test |  	to retry, use: --limit @/home/test/playbooks/webserver1.retry
+
+2019-03-20 16:24:04,886 p=2539 u=test |  PLAY RECAP *********************************************************************
+2019-03-20 16:24:04,886 p=2539 u=test |  server2                    : ok=7    changed=4    unreachable=0    failed=1   
+2019-03-20 16:25:40,148 p=2638 u=test |  PLAY [server2] *****************************************************************
+2019-03-20 16:25:40,168 p=2638 u=test |  TASK [Gathering Facts] *********************************************************
+2019-03-20 16:25:42,425 p=2638 u=test |  ok: [server2]
+2019-03-20 16:25:42,471 p=2638 u=test |  TASK [webserver : install httpd] ***********************************************
+2019-03-20 16:25:43,753 p=2638 u=test |  ok: [server2]
+2019-03-20 16:25:43,805 p=2638 u=test |  TASK [webserver : create index.html] *******************************************
+2019-03-20 16:25:45,797 p=2638 u=test |  ok: [server2]
+2019-03-20 16:25:45,850 p=2638 u=test |  TASK [webserver : start httpd service] *****************************************
+2019-03-20 16:25:46,925 p=2638 u=test |  ok: [server2]
+2019-03-20 16:25:46,982 p=2638 u=test |  TASK [mysql : install mysql server] ********************************************
+2019-03-20 16:25:47,991 p=2638 u=test |  ok: [server2]
+2019-03-20 16:25:48,041 p=2638 u=test |  TASK [mysql : create mysql config] *********************************************
+2019-03-20 16:25:49,260 p=2638 u=test |  ok: [server2]
+2019-03-20 16:25:49,312 p=2638 u=test |  TASK [mysql : start mysql server] **********************************************
+2019-03-20 16:25:50,183 p=2638 u=test |  ok: [server2]
+2019-03-20 16:25:50,189 p=2638 u=test |  PLAY RECAP *********************************************************************
+2019-03-20 16:25:50,189 p=2638 u=test |  server2                    : ok=7    changed=0    unreachable=0    failed=0   
+2019-03-20 16:26:04,580 p=2725 u=test |  PLAY [server2] *****************************************************************
+2019-03-20 16:26:04,601 p=2725 u=test |  TASK [Gathering Facts] *********************************************************
+2019-03-20 16:26:06,228 p=2725 u=test |  ok: [server2]
+2019-03-20 16:26:06,277 p=2725 u=test |  TASK [webserver : install httpd] ***********************************************
+2019-03-20 16:26:07,466 p=2725 u=test |  ok: [server2]
+2019-03-20 16:26:07,516 p=2725 u=test |  TASK [webserver : create index.html] *******************************************
+2019-03-20 16:26:09,520 p=2725 u=test |  ok: [server2]
+2019-03-20 16:26:09,569 p=2725 u=test |  TASK [webserver : start httpd service] *****************************************
+2019-03-20 16:26:10,630 p=2725 u=test |  ok: [server2]
+2019-03-20 16:26:10,681 p=2725 u=test |  TASK [mysql : install mysql server] ********************************************
+2019-03-20 16:26:11,682 p=2725 u=test |  ok: [server2]
+2019-03-20 16:26:11,733 p=2725 u=test |  TASK [mysql : create mysql config] *********************************************
+2019-03-20 16:26:12,963 p=2725 u=test |  ok: [server2]
+2019-03-20 16:26:13,011 p=2725 u=test |  TASK [mysql : start mysql server] **********************************************
+2019-03-20 16:26:13,885 p=2725 u=test |  ok: [server2]
+2019-03-20 16:26:13,888 p=2725 u=test |  PLAY RECAP *********************************************************************
+2019-03-20 16:26:13,888 p=2725 u=test |  server2                    : ok=7    changed=0    unreachable=0    failed=0   
+2019-03-20 17:12:42,824 p=2988 u=test |  PLAY [server2] *****************************************************************
+2019-03-20 17:12:42,852 p=2988 u=test |  TASK [Gathering Facts] *********************************************************
+2019-03-20 17:12:45,998 p=2988 u=test |  ok: [server2]
+2019-03-20 17:12:46,044 p=2988 u=test |  TASK [webserver : install httpd] ***********************************************
+2019-03-20 17:12:49,683 p=2988 u=test |  ok: [server2]
+2019-03-20 17:12:49,734 p=2988 u=test |  TASK [webserver : create index.html] *******************************************
+2019-03-20 17:12:51,859 p=2988 u=test |  ok: [server2]
+2019-03-20 17:12:51,911 p=2988 u=test |  TASK [webserver : start httpd service] *****************************************
+2019-03-20 17:12:53,722 p=2988 u=test |  changed: [server2]
+2019-03-20 17:12:53,772 p=2988 u=test |  TASK [mysql : install mysql server] ********************************************
+2019-03-20 17:12:54,833 p=2988 u=test |  ok: [server2]
+2019-03-20 17:12:54,883 p=2988 u=test |  TASK [mysql : create mysql config] *********************************************
+2019-03-20 17:12:56,141 p=2988 u=test |  ok: [server2]
+2019-03-20 17:12:56,196 p=2988 u=test |  TASK [mysql : start mysql server] **********************************************
+2019-03-20 17:12:59,360 p=2988 u=test |  changed: [server2]
+2019-03-20 17:12:59,362 p=2988 u=test |  PLAY RECAP *********************************************************************
+2019-03-20 17:12:59,362 p=2988 u=test |  server2                    : ok=7    changed=2    unreachable=0    failed=0   
+2019-03-20 18:01:50,967 p=3225 u=test |  PLAY [server2] *****************************************************************
+2019-03-20 18:01:50,994 p=3225 u=test |  TASK [Gathering Facts] *********************************************************
+2019-03-20 18:01:52,723 p=3225 u=test |  ok: [server2]
+2019-03-20 18:01:52,763 p=3225 u=test |  TASK [webserver : install httpd] ***********************************************
+2019-03-20 18:01:54,102 p=3225 u=test |  ok: [server2]
+2019-03-20 18:01:54,151 p=3225 u=test |  TASK [webserver : create index.html] *******************************************
+2019-03-20 18:01:56,142 p=3225 u=test |  ok: [server2]
+2019-03-20 18:01:56,192 p=3225 u=test |  TASK [webserver : start httpd service] *****************************************
+2019-03-20 18:01:57,239 p=3225 u=test |  ok: [server2]
+2019-03-20 18:01:57,286 p=3225 u=test |  TASK [mysql : install mysql server] ********************************************
+2019-03-20 18:01:58,302 p=3225 u=test |  ok: [server2]
+2019-03-20 18:01:58,356 p=3225 u=test |  TASK [mysql : create mysql config] *********************************************
+2019-03-20 18:01:59,612 p=3225 u=test |  ok: [server2]
+2019-03-20 18:01:59,660 p=3225 u=test |  TASK [mysql : start mysql server] **********************************************
+2019-03-20 18:02:00,512 p=3225 u=test |  ok: [server2]
+2019-03-20 18:02:00,615 p=3225 u=test |  TASK [ansible-role-git-master : Ensure git is installed (RedHat).] *************
+2019-03-20 18:03:18,789 p=3225 u=test |  changed: [server2]
+2019-03-20 18:03:18,837 p=3225 u=test |  TASK [ansible-role-git-master : Update apt cache (Debian).] ********************
+2019-03-20 18:03:18,865 p=3225 u=test |  skipping: [server2]
+2019-03-20 18:03:18,911 p=3225 u=test |  TASK [ansible-role-git-master : Ensure git is installed (Debian).] *************
+2019-03-20 18:03:18,939 p=3225 u=test |  skipping: [server2]
+2019-03-20 18:03:19,038 p=3225 u=test |  TASK [ansible-role-git-master : Include OS-specific variables (RedHat).] *******
+2019-03-20 18:03:19,058 p=3225 u=test |  skipping: [server2]
+2019-03-20 18:03:19,107 p=3225 u=test |  TASK [ansible-role-git-master : Include OS-specific variables (Fedora).] *******
+2019-03-20 18:03:19,127 p=3225 u=test |  skipping: [server2]
+2019-03-20 18:03:19,179 p=3225 u=test |  TASK [ansible-role-git-master : Include OS-specific variables (Debian).] *******
+2019-03-20 18:03:19,198 p=3225 u=test |  skipping: [server2]
+2019-03-20 18:03:19,251 p=3225 u=test |  TASK [ansible-role-git-master : Define git_install_from_source_dependencies.] ***
+2019-03-20 18:03:19,271 p=3225 u=test |  skipping: [server2]
+2019-03-20 18:03:19,323 p=3225 u=test |  TASK [ansible-role-git-master : Ensure git's dependencies are installed.] ******
+2019-03-20 18:03:19,340 p=3225 u=test |  skipping: [server2]
+2019-03-20 18:03:19,447 p=3225 u=test |  TASK [ansible-role-git-master : Get installed version.] ************************
+2019-03-20 18:03:19,465 p=3225 u=test |  skipping: [server2]
+2019-03-20 18:03:19,517 p=3225 u=test |  TASK [ansible-role-git-master : Force git install if the version numbers do not match.] ***
+2019-03-20 18:03:19,533 p=3225 u=test |  skipping: [server2]
+2019-03-20 18:03:19,589 p=3225 u=test |  TASK [ansible-role-git-master : Download git.] *********************************
+2019-03-20 18:03:19,611 p=3225 u=test |  skipping: [server2]
+2019-03-20 18:03:19,662 p=3225 u=test |  TASK [ansible-role-git-master : Expand git archive.] ***************************
+2019-03-20 18:03:19,682 p=3225 u=test |  skipping: [server2]
+2019-03-20 18:03:19,735 p=3225 u=test |  TASK [ansible-role-git-master : Build git.] ************************************
+2019-03-20 18:03:19,844 p=3225 u=test |  skipping: [server2] => (item=all) 
+2019-03-20 18:03:19,845 p=3225 u=test |  skipping: [server2] => (item=install) 
+2019-03-20 18:03:19,853 p=3225 u=test |  PLAY RECAP *********************************************************************
+2019-03-20 18:03:19,853 p=3225 u=test |  server2                    : ok=8    changed=1    unreachable=0    failed=0   

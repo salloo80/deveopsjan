@@ -1,0 +1,10 @@
+---
+- hosts: webserver
+  remote_user: test
+  become: yes
+  tasks:
+     - include: install.yml
+     - include: config.yml
+     - include: service.yml
+
+

@@ -1,0 +1,15 @@
+---
+- hosts: webserver
+  remote_user: test
+  become: yes
+  tasks:
+     - name: install httpd
+       command: yum install httpd -y creates=/var/www/html
+     - name: create index.html file
+       shell: echo "hello" > /var/www/html?index.html
+     - name: start httpd service
+       raw: service httpd start
+     - name: execute shell script
+       script: ./xyz.sh
+
+
